@@ -9,7 +9,7 @@
     <!-- Font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
-	<!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<!-- Lightbox -->
 	<link href="css/lightbox.css" rel="stylesheet" />
@@ -27,9 +27,10 @@
 		padding:10px 0px 0px 0px;
 	}
 
-	/*	.jumbotron {
-		background-color: #e9f1d0;
-	}*/
+		.jumbotron {
+		background-color: #f8faef;
+	}
+
 	.panel-body {
 		background-color: #f8faef;
 	}
@@ -43,11 +44,6 @@
 	/* Custom style for the selector buttons */
 	.selectButton {
 		font-size:1em;
-	}
-
-	/* Custom style for list group item */
-	.list-group-item{
-		background-color: #f8faef;
 	}
 
 .navbar-default {
@@ -115,7 +111,7 @@
   </head>
   <body>
 
-	<!-- NAVBAR -->
+  	<!-- NAVBAR -->
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header"> 
@@ -130,10 +126,10 @@
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li > <a href="index.html"> <span class="glyphicon glyphicon-home"></span>  Home </a></li>
-					<li> <a href="foodfinder.html" > <span class="glyphicon glyphicon-cutlery"></span> Food Finder </a></li>
+					<li> <a href="index.html" > <span class="glyphicon glyphicon-home"></span>  Home </a></li>
+					<li class="active"> <a href="foodfinder.html" > <span class="glyphicon glyphicon-cutlery"></span> Food Finder </a></li>
 				</ul>
-
+				
 				<form class="navbar-form navbar-left" role="search">
         			<div class="form-group">
           				<input type="text" class="form-control" placeholder="Search">
@@ -141,13 +137,12 @@
       			</form>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"> <a href="messages.html"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
-					<li> <a href="profile.html"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+					<li> <a href="messages.html"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
+					<li> <a href="profile.html" ><span class="glyphicon glyphicon-user"></span> Profile </a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-
 	<div class="container"></div>
 		</br>
 		</br>
@@ -156,32 +151,29 @@
 	</div>
 
 	<div class="container">
+		
+		<!-- PANEL -->
+		<div class="panel panel-default ">
 
-		<!-- <div class="jumbotron">
- 		 <h1>Welcome to nuTriton!</h1>
- 		 <p>This is the place where you can find foods suitable for your diets and allergies.</p>
+ 			<div class="panel-body">
+ 				<h3 >Nearby: Earl's Place Market<br/><br/></h3>
+
+    		Gluten Free Items: Glutino, Abcd, Efgh
+    		<br/>
+    		Vegan Items: Tofurky, Abcd, Efgh
+    		<br/>
+    		Vegatarian Items: Example, Abcd, Efgh
+    		
+    		<br/><br/>
+
+			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 121 </button>
+  			</div>
 		</div>
- -->
-		<ul class="list-group">
-  			<li class="list-group-item">
-  				<h3>John Doe</h3> Hey let's meet up!
-  			</li>
-  			<li class="list-group-item">
-  				<h3>Mr. Jones</h3> I've got quinoa!
-  			</li>
-  			<li class="list-group-item">
-  				<h3>Johnny Appleseed</h3> Do you know a good vegan restaurant around here?
-  			</li>
-  			<li class="list-group-item">
-  				<h3>Jane Roe</h3> Check out this recipe!
-  			</li>
-  			<li class="list-group-item">
-  				<h3>Tommy Atkins</h3> Hey! How have you been?
-  			</li>
-		</ul>
 
+		
+
+		
 	</div>
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
