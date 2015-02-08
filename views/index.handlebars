@@ -185,8 +185,12 @@
 			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-comment"></span>  View Comments</button>
 			<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star"></span></button>
 
+
+
   			</div>
 		</div>
+
+	
 
 		<!-- DUPLICATE PANEL -->
 		<div class="panel panel-default ">
@@ -234,7 +238,21 @@
 
   			</div>
 		</div>
+
+		{{#each posts}}
+	<div class="panel panel-default ">
+		<div class="panel-body">
+ 			<div class="posts">
+        	<h3>{{title}}</h3>
+        	<p>{{content}}</p>
+    		</div>
+    	</div>
+    </div>
+    {{/each}}
+    
 	</div>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
