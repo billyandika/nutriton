@@ -1,6 +1,6 @@
 var data = require("../data.json");
 
-exports.addFriend = function(req, res) {    
+exports.addPost = function(req, res) {   
 	// Your code goes here
 	res.render('add'); // add.handlebars
 	console.log(data);
@@ -12,4 +12,4 @@ exports.addFriend = function(req, res) { 
 
 	data["posts"].push(newPost);
 	
- }
+}
