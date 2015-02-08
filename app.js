@@ -12,6 +12,9 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 var add = require('./routes/add');
+var foodfinder = require('./routes/foodfinder');
+var messages = require('.routes/messages');
+var profile = require('./routes/profile');
 
 var app = express();
 
