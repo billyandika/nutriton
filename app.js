@@ -13,7 +13,7 @@ var index = require('./routes/index');
 // var user = require('./routes/user');
 var add = require('./routes/add');
 var foodfinder = require('./routes/foodfinder');
-var messages = require('.routes/messages');
+var messages = require('./routes/messages');
 var profile = require('./routes/profile');
 
 var app = express();
@@ -41,7 +41,10 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/add', add.addPost);
+app.get('/', messages.view);
+app.get('/', add.addPost);
+app.get('/', foodfinder.view);
+app.get('/', profile.view);
 
 // Example route
 // app.get('/users', user.list);
