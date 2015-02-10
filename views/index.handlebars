@@ -193,7 +193,7 @@
 	
 
 		<!-- DUPLICATE PANEL -->
-		<div class="panel panel-default ">
+		<!-- <div class="panel panel-default ">
  			<div class="panel-body">
  			<h3 >Vegan Snack Recipe<br/><br/></h3>
 
@@ -237,7 +237,7 @@
 			<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
 
   			</div>
-		</div>
+		</div> -->
 
 		{{#each posts}}
 		<div class="panel panel-default ">
@@ -245,6 +245,9 @@
  				<div class="posts">
         		<h3>{{title}}</h3>
         		<p>{{content}}</p>
+        		<br/>
+        		<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+    			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
     			</div>
     		</div>
     	</div>

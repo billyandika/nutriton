@@ -8,6 +8,8 @@ exports.addPost = function(req, res) {
 	var newPost = {
 		'title': req.query.title,
 		'content': req.query.content,
+		'upvotes': 0,
+		'downvotes': 0
 	}
 
 	data["posts"].push(newPost);
