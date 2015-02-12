@@ -210,7 +210,7 @@
 		<!-- PANEL -->
 		<div class="panel panel-default ">
 
- 			<div class="panel-body">
+<!--  			<div class="panel-body">
  				<h3 >Nearby: Earl's Place Market<br/><br/></h3>
 
     		Gluten Free Items: Glutino, Abcd, Efgh
@@ -220,7 +220,7 @@
     		Vegatarian Items: Example, Abcd, Efgh
     		
     		<br/><br/>
-			<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 121 </button>
+			<button type="button" id="upvote" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 121 </button>
   			</div>
 
   			<div class="panel-body">
@@ -233,7 +233,7 @@
     		Vegatarian Items: Lightlife, Nate's, Etc
     		
     		<br/><br/>
-			<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 36 </button>
+			<button type="button" id="upvote" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 36 </button>
   			</div>
 
   			<div class="panel-body">
@@ -246,7 +246,37 @@
     		Vegatarian Menu: Sweet Potato Fries, Fern Creek Smoothies
     		
     		<br/><br/>
-			<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 45 </button>
+			<button type="button" id="upvote" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 45 </button>
+  			</div> -->
+
+  			<div class="panel-body">
+  				<h3 id="canyon-vista-toggle">Canyon Vista <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+	  			<!-- <div class="canyon-vista" style="display:none;"> -->
+	  			
+		  			{{#each canyonvistamenu}}
+		 			<div class="canyonvistamenu">
+		        		<h4>{{name}} &nbsp; TESTING TESTING {{type}}
+		        		<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span>{{upvotes}}</button>
+		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
+		    			</h4>
+		    		</div>
+		    		{{/each}}
+
+				    <form id="addCanyonVistaForm" role="form" method="get" action="/addcanyonvista">
+					    <div class="form-group">
+					    	<br/>
+					    	<h4>Add Menu</h4>
+					      	<label for="name">Name:</label>
+					      	<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+					      	<label for="type">Type:</label>
+					     	<input type="text" class="form-control" id="type" placeholder="Type" name="type">
+					    </div>
+					    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
+					</form>
+
+	    		<!-- </div> -->
+
   			</div>
 		</div>
 	</div>
@@ -263,9 +293,12 @@
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/nutriton.js"></script>
 
-	<!-- Geolocation JS -->
 	<script type="text/javascript">
-		
+	
+	$("#canyon-vista-toggle").click(function(){
+		$(".canyon-vista").toggle();
+	});
+
 		function showMap() {
 		 
 			//If HTML5 Geolocation Is Supported In This Browser
