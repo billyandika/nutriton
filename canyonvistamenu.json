@@ -1,0 +1,22 @@
+{
+	"canyonvistamenu": [
+		{
+			"name": "Fish and Chips",
+			"type": "Gluten-free",
+			"upvotes": "9",
+			"downvotes": "0"
+		},
+		{
+			"name": "Fish and Chips 2",
+			"type": "Gluten-free",
+			"upvotes": "9",
+			"downvotes": "0"
+		},
+		{
+			"name": "Fish and Chips 3",
+			"type": "Gluten-free",
+			"upvotes": "9",
+			"downvotes": "0"
+		}
+	]
+}
