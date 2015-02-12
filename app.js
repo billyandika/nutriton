@@ -43,15 +43,9 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 
 app.get('/add', add.addPost);
-app.get('/messages', function(req,res){
-	res.render('messages');
-});
-app.get('/foodfinder', function(req,res){
-	res.render('foodfinder');
-});
-app.get('/profile', function(req,res){
-	res.render('profile');
-});
+app.get('/messages', messages.view);
+app.get('/foodfinder', foodfinder.view);
+app.get('/profile', profile.view);
 
 // Example route
 // app.get('/users', user.list);
