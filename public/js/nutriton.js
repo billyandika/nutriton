@@ -9,23 +9,28 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".upvote").click(increaseVote);
-
+      $(".upvote").click(increaseVote);
+      $(".downvote").click(decreaseVote);
 }
 
-var clicked = false;
-
 function increaseVote(e) {
-	console.log("clicked on upvote");
-
+    console.log("clicked on upvote");
     // prevent the page from reloading
     e.preventDefault();
     
-    if(clicked==false) {
-    var voteCount = parseInt($(this).text());
+    var voteupCount = parseInt($(this).text());
 
-    console.log((voteCount+1));
-    $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteCount+1));
-    clicked = true;
-  }
+    console.log((voteupCount+1));
+    $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteupCount+1));
 }
+
+function decreaseVote(e) {
+  console.log("clicked on downvote");
+  e.preventDefault();
+
+  var votedownCount = parseInt($(this).text());
+
+  console.log((votedownCount+1));
+  $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (votedownCount+1));
+}
+
