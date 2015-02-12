@@ -12,6 +12,6 @@ exports.addMenu = function(req, res) {
 		'downvotes': 0
 	}
 
-	data["canyonvistamenu"].push(newMenu);
+	canyonvistadata["canyonvistamenu"].push(newMenu);
 	
 }
