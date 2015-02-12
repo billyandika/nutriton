@@ -14,4 +14,4 @@ exports.addPost = function(req, res) {
 
 	data["posts"].push(newPost);
 	
-}
+};
