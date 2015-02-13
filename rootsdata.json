@@ -1,22 +1,22 @@
 {
 	"rootsposts": [
 		{
-			"name": "Roots",
-			"type": "Gluten-free",
-			"upvotes": "9",
+			"name": "Gnocchi",
+			"type": "Vegan",
+			"upvotes": "8",
 			"downvotes": "0"
 		},
 		{
-			"name": "Roots 2",
-			"type": "Gluten-free",
-			"upvotes": "9",
-			"downvotes": "0"
+			"name": "Berger",
+			"type": "Vegan",
+			"upvotes": "17",
+			"downvotes": "2"
 		},
 		{
-			"name": "Roots 3",
-			"type": "Gluten-free",
-			"upvotes": "9",
-			"downvotes": "0"
+			"name": "Tofu & Greens",
+			"type": "Vegan",
+			"upvotes": "11",
+			"downvotes": "1"
 		}
 	]
 }

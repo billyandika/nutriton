@@ -247,10 +247,11 @@
         		<br/>
         		<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
     			<button type="button" class="downvote btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
+    			<button type="button" class="btn btn-default comments-toggle">Comments</button>
 				<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
     			</div>
-    			<!-- <h4 class="comments-toggle">Comments</h4>
     			<div class="comments" style="display:none;">
+    				<br/>
     				{{comments}}
     				<form id="addFriendForm" role="form" method="get" action="/addcomment">
 				    <div class="form-group">
@@ -258,7 +259,7 @@
 				    </div>
 				    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 				</form>
-    			</div> -->
+    			</div>
     		</div>
     	</div>
     	{{/each}}

@@ -1,21 +1,21 @@
 {
 	"pinesposts": [
 		{
-			"name": "Pines",
-			"type": "Gluten-free",
-			"upvotes": "9",
+			"name": "Black Beans",
+			"type": "Vegetarian",
+			"upvotes": "2",
 			"downvotes": "0"
 		},
 		{
-			"name": "Pines 2",
-			"type": "Gluten-free",
-			"upvotes": "9",
-			"downvotes": "0"
+			"name": "Brown Rice",
+			"type": "Vegan",
+			"upvotes": "1",
+			"downvotes": "1"
 		},
 		{
-			"name": "Pines 3",
-			"type": "Gluten-free",
-			"upvotes": "9",
+			"name": "Potatoes",
+			"type": "Vegetarian",
+			"upvotes": "3",
 			"downvotes": "0"
 		}
 	]

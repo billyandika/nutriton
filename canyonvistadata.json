@@ -1,22 +1,22 @@
 {
 	"canyonvistaposts": [
 		{
-			"name": "Fish and Chips",
+			"name": "Carved Roast Turkey",
 			"type": "Gluten-free",
 			"upvotes": "2",
 			"downvotes": "0"
 		},
 		{
-			"name": "Fish and Chips 2",
-			"type": "Gluten-free",
+			"name": "Steamed Vegetables",
+			"type": "Vegan",
 			"upvotes": "3",
-			"downvotes": "0"
+			"downvotes": "1"
 		},
 		{
-			"name": "Fish and Chips 3",
-			"type": "Gluten-free",
-			"upvotes": "4",
-			"downvotes": "0"
+			"name": "Chipotle Burger",
+			"type": "Vegetarian",
+			"upvotes": "5",
+			"downvotes": "1"
 		}
 	]
 }
