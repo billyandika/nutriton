@@ -17,13 +17,17 @@ function initializePage() {
 function fillStar(e) {
     console.log("clicked on favorite");
     e.preventDefault();
-    if ($(this).html() == '<span class=\"glyphicon glyphicon-star\"></span> ') {
-      $(this).html('<span class=\"glyphicon glyphicon-star-empty\"><span> ');
-    } else if ($(this).html() == '<span class=\"glyphicon glyphicon-star-empty\"><span> ') {
-      $(this).html('<span class=\"glyphicon glyphicon-star\"></span> ');
+    
+    //check the child class of the button element to see if child has
+    //class glyphicon-star or glyphicon-star-empty, changing to other if true
+    if($(this).children().hasClass("glyphicon-star")) {
+        console.log("star is now unfavorited");
+        $(this).html('<span class=\"glyphicon glyphicon-star-empty\"><span>');
     }
-    //$(this).html('<span class=\"glyphicon glyphicon-star\"></span> ').toggle();
-    //$(this).html('<span class=\"glyphicon glyphicon-star-empty\"><span> ').toggle();
+    else if($(this).children().hasClass("glyphicon-star-empty")) {
+        console.log("star is now favorited");
+        $(this).html('<span class=\"glyphicon glyphicon-star\"></span>');
+    }
 }
 
 function increaseVote(e) {
