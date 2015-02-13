@@ -26,11 +26,9 @@
 		margin: 0px;
 		padding:10px 0px 0px 0px;
 	}
-
-		.jumbotron {
-		background-color: #f8faef;
+	h4 {
+		clear:both;
 	}
-
 	.panel-body {
 		background-color: #f8faef;
 	}
@@ -39,11 +37,6 @@
 		font-family: "Pacifico", serif;
 		font-size: 22pt;
 		text-shadow: 2px 2px 3px #17A57D;
-	}
-
-	/* Custom style for the selector buttons */
-	.selectButton {
-		font-size:1em;
 	}
 
 .navbar-default {
@@ -256,21 +249,22 @@
 
 		  			{{#each canyonData.canyonvistaposts}}
 		 			<div class="canyonvistaposts">
-		        		<h4>{{name}} &nbsp;  {{type}}
-		        		<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		        		<h4>{{name}} &nbsp; ({{type}})
 		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
+		    			<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
 		    			</h4>
 		    		</div>
 		    		{{/each}}
 
 				    <form id="addCanyonVistaForm" role="form" method="get" action="/addcanyonvista">
-					    <div class="form-group">
-					    	<br/>
-					    	<h4>Add Menu</h4>
+					    <h4>Add Menu</h4>
+					    <div class="form-group form-inline">
 					      	<label for="name">Name:</label>
-					      	<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-					      	<label for="type">Type:</label>
-					     	<input type="text" class="form-control" id="type" placeholder="Type" name="type">
+					      	<input type="text" class="form-control" id="name" placeholder="e.g. fish" name="name">
+					    </div>
+					    <div class="form-group form-inline">
+					    <label for="type">Type:</label>
+					     	<input type="text" class="form-control" id="type" placeholder="e.g. Gluten-free" name="type">
 					    </div>
 					    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 					</form>
