@@ -16,6 +16,8 @@ var foodfinder = require('./routes/foodfinder');
 var messages = require('./routes/messages');
 var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
+var addpines = require('./routes/addpines');
+var addroots = require('./routes/addroots');
 
 var app = express();
 
@@ -47,6 +49,8 @@ app.get('/messages', messages.view);
 app.get('/foodfinder', foodfinder.view);
 app.get('/profile', profile.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
+app.get('/addpines', addpines.addMenu);
+app.get('/addroots', addroots.addMenu);
 
 // Example route
 // app.get('/users', user.list);

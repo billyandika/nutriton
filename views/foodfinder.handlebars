@@ -245,7 +245,7 @@
   			<div class="panel-body">
   				<h3 id="canyon-vista-toggle">Canyon Vista <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-	  			<!-- <div class="canyon-vista" style="display:none;"> -->
+	  			<div class="canyon-vista" style="display:none;">
 
 		  			{{#each canyonData.canyonvistaposts}}
 		 			<div class="canyonvistaposts">
@@ -268,13 +268,13 @@
 					    </div>
 					    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 					</form>
-	    		<!-- </div> -->
+	    		</div>
   			</div>
 
 			<div class="panel-body">
-  				<h3 id="Pines-toggle">Pines <span class="glyphicon glyphicon-chevron-down"></span></h3>
+  				<h3 id="pines-toggle">Pines <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
-	  			<!-- <div class="pines" style="display:none;"> -->
+	  			<div class="pines" style="display:none;">
 
 		  			{{#each pinesData.pinesposts}}
 		 			<div class="pinesposts">
@@ -297,7 +297,36 @@
 					    </div>
 					    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 					</form>
-	    		<!-- </div> -->
+	    		</div>
+  			</div>
+
+  			<div class="panel-body">
+  				<h3 id="roots-toggle">Roots <span class="glyphicon glyphicon-chevron-down"></span></h3>
+
+	  			<div class="roots" style="display:none;">
+
+		  			{{#each rootsData.rootsposts}}
+		 			<div class="rootsposts">
+		        		<h4>{{name}} &nbsp; ({{type}})
+		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
+		    			<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		    			</h4>
+		    		</div>
+		    		{{/each}}
+
+				    <form id="addRootsForm" role="form" method="get" action="/addroots">
+					    <h4>Add Menu</h4>
+					    <div class="form-group form-inline">
+					      	<label for="name">Name:</label>
+					      	<input type="text" class="form-control" id="name" placeholder="e.g. fish" name="name">
+					    </div>
+					    <div class="form-group form-inline">
+					    <label for="type">Type:</label>
+					     	<input type="text" class="form-control" id="type" placeholder="e.g. Gluten-free" name="type">
+					    </div>
+					    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
+					</form>
+	    		</div>
   			</div>
 
 		</div>
@@ -319,6 +348,14 @@
 	
 	$("#canyon-vista-toggle").click(function(){
 		$(".canyon-vista").toggle();
+	});
+
+	$("#pines-toggle").click(function(){
+		$(".pines").toggle();
+	});
+
+	$("#roots-toggle").click(function(){
+		$(".roots").toggle();
 	});
 
 		function showMap() {

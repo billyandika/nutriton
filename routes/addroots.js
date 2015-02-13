@@ -1,10 +1,10 @@
-var canyonvistadata = require("../canyonvistadata.json");
 var pinesdata = require("../pinesdata.json");
+var canyonvistadata = require("../canyonvistadata.json");
 var rootsdata = require("../rootsdata.json");
 
 exports.addMenu = function(req, res) {   
 	// Your code goes here
-	console.log(canyonvistadata);
+	console.log(rootsdata);
 
 	var newMenu = {
 		'name': req.query.name,
@@ -13,7 +13,7 @@ exports.addMenu = function(req, res) {
 		'downvotes': 0
 	}
 
-	canyonvistadata["canyonvistaposts"].push(newMenu);
+	rootsdata["rootsposts"].push(newMenu);
 	
 	res.render('foodfinder', {"canyonData" : canyonvistadata, "pinesData": pinesdata, "rootsData": rootsdata});
 };
