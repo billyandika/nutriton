@@ -2,7 +2,6 @@ var data = require("../data.json");
 
 exports.addPost = function(req, res) {   
 	// Your code goes here
-	res.render('add'); // add.handlebars
 	console.log(data);
 
 	var newPost = {
@@ -13,5 +12,6 @@ exports.addPost = function(req, res) {
 	}
 
 	data["posts"].push(newPost);
+	res.render('index', data); // add.handlebars
 	
 };
