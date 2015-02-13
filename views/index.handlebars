@@ -249,6 +249,16 @@
     			<button type="button" class="downvote btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
 				<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
     			</div>
+    			<!-- <h4 class="comments-toggle">Comments</h4>
+    			<div class="comments" style="display:none;">
+    				{{comments}}
+    				<form id="addFriendForm" role="form" method="get" action="/addcomment">
+				    <div class="form-group">
+				      	<input type="text" class="form-control" id="title" placeholder="Add comment..." name="title">
+				    </div>
+				    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
+				</form>
+    			</div> -->
     		</div>
     	</div>
     	{{/each}}
@@ -282,6 +292,14 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/nutriton.js"></script>
+
+	<script>
+	$(".comments-toggle").click(function(){
+		$(".comments").toggle();
+	});
+
+
+	</script>
 	
   </body>
 </html>
