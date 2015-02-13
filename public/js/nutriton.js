@@ -11,6 +11,13 @@ $(document).ready(function() {
 function initializePage() {
       $(".upvote").click(increaseVote);
       $(".downvote").click(decreaseVote);
+      $(".favorite").click(fillStar);
+}
+
+function fillStar(e) {
+    console.log("clicked on favorite");
+    e.preventDefault();
+    $(this).html('<span class=\"glyphicons-50-star\"></span> ');
 }
 
 function increaseVote(e) {
