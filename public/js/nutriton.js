@@ -17,7 +17,7 @@ function initializePage() {
 function fillStar(e) {
     console.log("clicked on favorite");
     e.preventDefault();
-    $(this).html('<span class=\"glyphicons-50-star\"></span> ');
+    $(this).html('<span class=\"glyphicon glyphicon-star\"></span> ');
 }
 
 function increaseVote(e) {
