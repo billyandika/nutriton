@@ -51,6 +51,66 @@
 	}
 
 .navbar-default {
+  background-color: #87b822;
+  border-color: #87b822;
+}
+.navbar-default .navbar-brand {
+  color: #d4dca8;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #d4dca8;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #d4dca8;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #87b822;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #87b822;
+}
+.navbar-default .navbar-toggle {
+  border-color: #87b822;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #87b822;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #d4dca8;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #d4dca8;
+}
+.navbar-default .navbar-link {
+  color: #d4dca8;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #d4dca8;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #87b822;
+  }
+}
+
+/*.navbar-default {
 	background-color: #87b822;
 	border-color: #7ea32f;
 }
@@ -109,7 +169,7 @@
 		color: #eff2df;
 		background-color: #7ea32f;
 	}
-}
+}*/
     </style>
 
   </head>
@@ -129,10 +189,10 @@
 			</div>
 
 			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
+			<!-- 	<ul class="nav navbar-nav">
 					<li > <a href="/"> <span class="glyphicon glyphicon-home"></span>  Home </a></li>
 					<li> <a href="foodfinder" > <span class="glyphicon glyphicon-cutlery"></span> Food Finder </a></li>
-				</ul>
+				</ul> -->
 
 				<!-- <form class="navbar-form navbar-left" role="search">
         			<div class="form-group">
@@ -140,9 +200,17 @@
         			</div>
       			</form> -->
 
-				<ul class="nav navbar-nav navbar-right">
+			<!-- 	<ul class="nav navbar-nav navbar-right">
 					<li class="active"> <a href="messages"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
 					<li> <a href="profile"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+					<li> <a href="" > Log Out </a></li>
+				</ul> -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li > <a href="/" > Home </a></li>
+					<li > <a href="foodfinder" > Food Finder </a></li>
+					<li class="active"> <a href="messages"> Messages </a></li>
+					<li> <a href="profile" >Profile </a></li>
 					<li> <a href="" > Log Out </a></li>
 				</ul>
 			</div>
