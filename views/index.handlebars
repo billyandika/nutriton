@@ -34,7 +34,7 @@
 	.navbar-brand {
 		font-family: "Pacifico", serif;
 		font-size: 22pt;
-		text-shadow: 2px 2px 3px #17A57D;
+		text-shadow: 1px 1px 2px #17A57D;
 	}
 
 
@@ -141,7 +141,6 @@
 		</br>
 		</br>
 		</br>
-		</br>
 	</div>
 
 	<div class="container">
@@ -173,24 +172,10 @@
 	  		</div>
 			</div>
 
-    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ego vero isti, inquam, permitto. Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos. Illa sunt similia: hebes acies est cuipiam oculorum, corpore alius senescit; Ad corpus diceres pertinere-, sed ea, quae dixi, ad corpusne refers?
-
-			Itaque haec cum illis est dissensio, cum Peripateticis nulla sane. Rationis enim perfectio est virtus; Et quidem saepe quaerimus verbum Latinum par Graeco et quod idem valeat; Praeclare enim Plato: Beatum, cui etiam in senectute contigerit, ut sapientiam verasque opiniones assequi possit. Et quidem, inquit, vehementer errat; Quid ait Aristoteles reliquique Platonis alumni?
-
-			Cur, nisi quod turpis oratio est? Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Si longus, levis dictata sunt. Aut unde est hoc contritum vetustate proverbium: quicum in tenebris? Quos quidem tibi studiose et diligenter tractandos magnopere censeo.
-    		
-    		<br/><br/>
-
-			<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 74 </button>
-			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-comment"></span>  View Comments</button>
-			<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
-			
   			</div>
 		</div> -->
 
-	
 
-	
 		<!-- <div class="panel panel-default ">
  			<div class="panel-body">
  			<h3 >Vegan Snack Recipe<br/><br/></h3>
@@ -210,32 +195,11 @@
 		  		</div>
 				</div>
 
-				Ingredients:
-				<br/><br/>
-				<ul>
-					<li>Sugar</li>
-					<li>Space</li>
-					<li>Everything nice</li>
-					<li>Chemical X</li>
-				</ul>
-				<br/>
-
-    			1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ego vero isti, inquam, permitto. Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos. Illa sunt similia: hebes acies est cuipiam oculorum, corpore alius senescit; Ad corpus diceres pertinere-, sed ea, quae dixi, ad corpusne refers?
-    			<br/><br/>
-
-    			2. Nulla et vulputate libero, varius viverra orci. Quisque nunc leo, bibendum eget vulputate ac, imperdiet id diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce neque mi, bibendum in molestie at, maximus viverra ante. Maecenas eu metus consequat, fermentum mi eu, consectetur velit. Vestibulum condimentum neque sed quam scelerisque fringilla
-    			<br/><br/>
-
-    			3. Sed hendrerit tempor nibh, nec dignissim mi hendrerit eget. Pellentesque magna tortor, auctor eget semper at, ornare ac nisl. Morbi gravida ex gravida, euismod nunc nec, laoreet felis. Vivamus volutpat elit quam, in scelerisque odio porttitor sit amet. Praesent scelerisque nulla sit amet arcu vestibulum pharetra. Donec euismod orci a risus vehicula, quis facilisis augue bibendum. 
-
-    			<br/><br/>
-
-    		<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 56 </button>
-			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-comment"></span>  View Comments</button>
-			<button type="button" class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
-
   			</div>
 		</div> -->
+        <button type="button" class="btn btn-default pull-right"><a href="#bottom"><span class="glyphicon glyphicon-plus"></span> New Post</a></button>
+        <br/>
+        <br/>
 
 
 		{{#each posts}}
@@ -271,11 +235,13 @@
 				    <div class="form-group">
 				    	<h3>Create New Post</h3>
 				    	<br/>
+
 				      	<label for="title">Title:</label>
 				      	<input type="text" class="form-control" id="title" placeholder="Title" name="title">
 				      	<label for="content">Content:</label>
 				     	<input type="text" class="form-control" id="content" placeholder="Content" name="content">
 				    </div>
+				   	<a name="bottom">
 				    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 				</form>
 
