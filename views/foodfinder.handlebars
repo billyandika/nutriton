@@ -201,7 +201,6 @@
 
 
 		<!-- PANEL -->
-		<div class="panel panel-default ">
 
 <!--  			<div class="panel-body">
  				<h3 >Nearby: Earl's Place Market<br/><br/></h3>
@@ -241,20 +240,25 @@
     		<br/><br/>
 			<button type="button" id="upvote" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> 45 </button>
   			</div> -->
-
+		
+		<div class="panel panel-default ">
   			<div class="panel-body">
   				<h3 id="canyon-vista-toggle">Canyon Vista <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
 	  			<div class="canyon-vista" style="display:none;">
+	  				<br/>
 
 		  			{{#each canyonData.canyonvistaposts}}
 		 			<div class="canyonvistaposts">
-		        		<h4>{{name}} &nbsp; ({{type}})
-		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
-		    			<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		        		<h4>
+		    			{{name}}  ({{type}})
+		    			<br/>
+		    			<button type="button" class="btn btn-default btn-sm upvote"><span class="glyphicon glyphicon-triangle-top"></span> {{upvotes}}</button>
+		    			<button type="button" class="btn btn-default btn-sm downvote"><span class="glyphicon glyphicon-triangle-bottom"></span> {{downvotes}}</button>
 		    			</h4>
 		    		</div>
 		    		{{/each}}
+		    		<br/>
 
 				    <form id="addCanyonVistaForm" role="form" method="get" action="/addcanyonvista">
 					    <h4><strong>Add Menu</strong></h4>
@@ -270,20 +274,26 @@
 					</form>
 	    		</div>
   			</div>
+		</div>
 
+		<div class="panel panel-default ">
 			<div class="panel-body">
   				<h3 id="pines-toggle">Pines <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
 	  			<div class="pines" style="display:none;">
+	  				<br/>
 
 		  			{{#each pinesData.pinesposts}}
 		 			<div class="pinesposts">
-		        		<h4>{{name}} &nbsp; ({{type}})
-		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
-		    			<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		        		<h4>
+		    			{{name}}  ({{type}})
+		    			<br/>
+		    			<button type="button" class="btn btn-default btn-sm upvote"><span class="glyphicon glyphicon-triangle-top"></span> {{upvotes}}</button>
+		    			<button type="button" class="btn btn-default btn-sm downvote"><span class="glyphicon glyphicon-triangle-bottom"></span> {{downvotes}}</button>
 		    			</h4>
 		    		</div>
 		    		{{/each}}
+		    		<br/>
 
 				    <form id="addPinesForm" role="form" method="get" action="/addpines">
 					    <h4><strong>Add Menu</strong></h4>
@@ -299,20 +309,25 @@
 					</form>
 	    		</div>
   			</div>
+  		</div>
 
+  		<div class="panel panel-default ">
   			<div class="panel-body">
   				<h3 id="roots-toggle">Roots <span class="glyphicon glyphicon-chevron-down"></span></h3>
 
 	  			<div class="roots" style="display:none;">
-
+	  				<br/>
 		  			{{#each rootsData.rootsposts}}
 		 			<div class="rootsposts">
-		        		<h4>{{name}} &nbsp; ({{type}})
-		    			<button type="button" class="btn btn-default downvote pull-right"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
-		    			<button type="button" class="btn btn-default upvote pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		        		<h4>
+		    			{{name}}  ({{type}})
+		    			<br/>
+		    			<button type="button" class="btn btn-default btn-sm upvote"><span class="glyphicon glyphicon-triangle-top"></span> {{upvotes}}</button>
+		    			<button type="button" class="btn btn-default btn-sm downvote"><span class="glyphicon glyphicon-triangle-bottom"></span> {{downvotes}}</button>
 		    			</h4>
 		    		</div>
 		    		{{/each}}
+		    		<br/>
 
 				    <form id="addRootsForm" role="form" method="get" action="/addroots">
 					    <h4><strong>Add Menu</strong></h4>
@@ -328,8 +343,7 @@
 					</form>
 	    		</div>
   			</div>
-
-		</div>
+  		</div>
 	</div>
 
 	<!-- Include Google Maps API -->
