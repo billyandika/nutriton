@@ -12,6 +12,18 @@ function initializePage() {
       $(".upvote").click(increaseVote);
       $(".downvote").click(decreaseVote);
       $(".favorite").click(fillStar);
+      
+      $("#canyon-vista-toggle").click(function() {
+          $(".canyon-vista").slideToggle();
+      });
+
+      $("#pines-toggle").click(function(){
+          $(".pines").slideToggle();
+      });
+
+      $("#roots-toggle").click(function(){
+          $(".roots").slideToggle();
+      });
 }
 
 function fillStar(e) {
