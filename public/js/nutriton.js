@@ -15,7 +15,6 @@ function initializePage() {
 }
 
 function fillStar(e) {
-    console.log("clicked on favorite");
     e.preventDefault();
     
     //check the child class of the button element to see if child has
@@ -31,23 +30,64 @@ function fillStar(e) {
 }
 
 function increaseVote(e) {
-    console.log("clicked on upvote");
-    // prevent the page from reloading
     e.preventDefault();
     
-    var voteupCount = parseInt($(this).text());
+    //colors used, like and dislike: rgb(135, 184, 34) rgb(235, 138, 131)
+    if($(this).css("color") == "rgb(51, 51, 51)") {
+        if(($(this).next().children().hasClass("glyphicon-thumbs-down")) && 
+           ($(this).next().css("color") == "rgb(255, 255, 255)")) {
 
-    console.log((voteupCount+1));
-    $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteupCount+1));
+            //change back default button color
+            $(this).next().css("background-color", "rgb(230, 230, 230)");
+            $(this).next().css("color", "rgb(51, 51, 51)");
+
+            var voteCount = parseInt($(this).next().text());
+            //decrement other button
+            $(this).next().html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (voteCount-1));
+      }
+      //change current button
+      $(this).css("color", "rgb(255, 255, 255)");
+      $(this).css("background-color", "rgb(135, 184, 34)");
+    
+      var voteupCount = parseInt($(this).text());
+
+      $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteupCount+1));
+    }
+    else {
+      //button has already been clicked
+      console.log("already clicked");
+    }
+    
 }
 
 function decreaseVote(e) {
-  console.log("clicked on downvote");
   e.preventDefault();
 
-  var votedownCount = parseInt($(this).text());
+  if($(this).css("color") == "rgb(51, 51, 51)") {
+        //check if other button has been selected already
+        if(($(this).prev().children().hasClass("glyphicon-thumbs-up")) && 
+           ($(this).prev().css("color") == "rgb(255, 255, 255)")) {
 
-  console.log((votedownCount+1));
-  $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (votedownCount+1));
+            //change back default button color
+            $(this).prev().css("background-color", "rgb(230, 230, 230)");
+            $(this).prev().css("color", "rgb(51, 51, 51)");
+
+            var voteCount = parseInt($(this).prev().text());
+            //decrement other button
+            $(this).prev().html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteCount-1));
+      }
+      //change current button
+      $(this).css("color", "rgb(255, 255, 255)");
+      $(this).css("background-color", "rgb(235, 138, 131)");
+      
+      var votedownCount = parseInt($(this).text());
+
+      $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (votedownCount+1));
+    }
+    //button has already been clicked
+    else {
+      console.log("already clicked");
+    }
+  
 }
 
