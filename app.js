@@ -19,6 +19,9 @@ var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
 var addroots = require('./routes/addroots');
+var canyonvista = require('./routes/canyonvista');
+var pines = require('./routes/pines');
+var roots = require('./routes/roots');
 
 var app = express();
 
@@ -53,6 +56,9 @@ app.get('/profile', profile.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
 app.get('/addpines', addpines.addMenu);
 app.get('/addroots', addroots.addMenu);
+app.get('/canyonvista', canyonvista.view);
+app.get('/pines', pines.view);
+app.get('/roots', roots.view);
 
 // Example route
 // app.get('/users', user.list);
