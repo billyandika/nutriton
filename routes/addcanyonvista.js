@@ -1,6 +1,4 @@
 var canyonvistadata = require("../canyonvistadata.json");
-var pinesdata = require("../pinesdata.json");
-var rootsdata = require("../rootsdata.json");
 
 exports.addMenu = function(req, res) {   
 	// Your code goes here
@@ -15,5 +13,5 @@ exports.addMenu = function(req, res) {
 
 	canyonvistadata["canyonvistaposts"].push(newMenu);
 	
-	res.render('foodfinder', {"canyonData" : canyonvistadata, "pinesData": pinesdata, "rootsData": rootsdata});
+	res.render('canyonvista', {"canyonData" : canyonvistadata});
 };
