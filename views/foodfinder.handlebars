@@ -309,7 +309,6 @@
 			                title: "You Are Here!"
 			    		});
 			    		setMarkers(map, locationUCSD);
-			    		//marker.setIcon('newImage.png');
 					}
 				);
 		    } else {
@@ -318,23 +317,43 @@
 		    }	
 
 			var locationUCSD = [
-    			['Canyon Vista', 32.8839388, -117.2332095, 1],
-    			['Earls Place and Market', 32.8839388, -117.2332095, 2],
-    			['Sixth College Place and Market', 32.878941,-117.2306969, 3],
-    			['Foodworx', 32.878941,-117.2306969, 4],
-	   			['Cafe Ventanas', 32.8857478,-117.2430154, 5],
-     			['Oceanview Terrace Restaurant', 32.883108, -117.2416931, 6],
-     			['Goodys Place and Market', 32.883108, -117.2416931, 7],
-	     		['Pines', 32.8790174, -117.2415268, 8],
-     			['Muir Woods Coffee House', 32.8789093, -117.2418379, 9],
-    			['Rogers Place and Market', 32.8749209, -117.2423118, 10],
-    			['64 Degrees', 32.8748725, -117.2419578, 11],
-    			['Roots', 32.8759166, -117.2354978, 12],
-    			['The Bistro', 32.8879506, -117.2423824, 13],
-    			['The Village', 32.8872344, -117.2422322, 14],
-    			['Sunshine Market', 32.8796677, -117.2359832, 15]
+    			["Canyon Vista", 32.8839388, -117.2332095, 1],
+    			["Earl\'s Place and Market", 32.8839388, -117.2332095, 2],
+    			["Sixth College Place and Market", 32.878941,-117.2306969, 3],
+    			["Foodworx", 32.878941,-117.2306969, 4],
+	   			["Cafe Ventanas", 32.8857478,-117.2430154, 5],
+     			["Oceanview Terrace Restaurant", 32.883108, -117.2416931, 6],
+     			["Goody\'s Place and Market", 32.883108, -117.2416931, 7],
+	     		["Pines", 32.8790174, -117.2415268, 8],
+     			["Muir Woods Coffee House", 32.8789093, -117.2418379, 9],
+    			["Roger\'s Place and Market", 32.8749209, -117.2423118, 10],
+    			["64 Degrees", 32.8748725, -117.2419578, 11],
+    			["Roots", 32.8759166, -117.2354978, 12],
+    			["The Bistro", 32.8879506, -117.2423824, 13],
+    			["The Village", 32.8872344, -117.2422322, 14],
+    			["Sunshine Market", 32.8796677, -117.2359832, 15]
     		];
 
+    		var infoWindow = new google.maps.InfoWindow();
+
+    	// Info Window Content
+    	var infoWindowContent = [
+    		["Canyon Vista"],
+    		["Earl\'s Place and Market"],
+    		["Sixth College Place and Market"],
+    		["Foodworx"],
+    		["Cafe Ventanas"],
+    		["Oceanview Terrace Restaurant"],
+    		["Goody\'s Place and Market"],
+    		["Pines"],
+    		["Muir Woods Coffee House"],
+    		["Roger\'s Place and Market"],
+    		["64 Degrees"],
+    		["Roots"],
+    		["The Bistro"],
+    		["The Village"],
+    		["Sunshine Market"]
+    	];
 
 			function setMarkers(map, locations) {
     			for (var i = 0; i < locations.length; i++) {
@@ -348,6 +367,15 @@
         				draggable: false,
         				animation: google.maps.Animation.DROP
     				});
+   					foodLoc.setIcon('images/google-marker.png');
+
+   					// Allow each marker to have an info window    
+       				google.maps.event.addListener(foodLoc, 'click', (function(foodLoc, i) {
+           				return function() {
+                			infoWindow.setContent(infoWindowContent[i][0]);
+                			infoWindow.open(map, foodLoc);
+            			}
+        			})(foodLoc, i));
         		}
    				
    			}
