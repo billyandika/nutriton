@@ -20,6 +20,7 @@ var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
 var addroots = require('./routes/addroots');
 var canyonvista = require('./routes/canyonvista');
+var pines = require('./routes/pines');
 
 var app = express();
 
@@ -55,6 +56,7 @@ app.get('/addcanyonvista', addcanyonvista.addMenu);
 app.get('/addpines', addpines.addMenu);
 app.get('/addroots', addroots.addMenu);
 app.get('/canyonvista', canyonvista.view);
+app.get('/pines', pines.view)
 
 // Example route
 // app.get('/users', user.list);
