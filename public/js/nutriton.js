@@ -54,8 +54,13 @@ function increaseVote(e) {
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteupCount+1));
     }
     else {
-      //button has already been clicked
-      console.log("already clicked");
+      //change button back
+      $(this).css("background-color", "rgb(230, 230, 230)");
+      $(this).css("color", "rgb(51, 51, 51)");
+
+      var voteBackCount = parseInt($(this).text());
+      //decrement this button
+      $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteBackCount-1));
     }
     
 }
@@ -84,9 +89,14 @@ function decreaseVote(e) {
 
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (votedownCount+1));
     }
-    //button has already been clicked
     else {
-      console.log("already clicked");
+      //change button back
+      $(this).css("background-color", "rgb(230, 230, 230)");
+      $(this).css("color", "rgb(51, 51, 51)");
+
+      var voteBackCount = parseInt($(this).text());
+      //decrement this button
+      $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (voteBackCount-1));
     }
   
 }
