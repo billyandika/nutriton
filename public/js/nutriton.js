@@ -38,7 +38,7 @@ function increaseVote(e) {
            ($(this).next().css("color") == "rgb(255, 255, 255)")) {
 
             //change back default button color
-            $(this).next().css("background-color", "rgb(230, 230, 230)");
+            $(this).next().css("background-color", "rgb(255, 255, 255)");
             $(this).next().css("color", "rgb(51, 51, 51)");
 
             var voteCount = parseInt($(this).next().text());
@@ -55,7 +55,7 @@ function increaseVote(e) {
     }
     else {
       //change button back
-      $(this).css("background-color", "rgb(230, 230, 230)");
+      $(this).css("background-color", "rgb(255, 255, 255)");
       $(this).css("color", "rgb(51, 51, 51)");
 
       var voteBackCount = parseInt($(this).text());
@@ -74,7 +74,7 @@ function decreaseVote(e) {
            ($(this).prev().css("color") == "rgb(255, 255, 255)")) {
 
             //change back default button color
-            $(this).prev().css("background-color", "rgb(230, 230, 230)");
+            $(this).prev().css("background-color", "rgb(255, 255, 255)");
             $(this).prev().css("color", "rgb(51, 51, 51)");
 
             var voteCount = parseInt($(this).prev().text());
@@ -91,7 +91,7 @@ function decreaseVote(e) {
     }
     else {
       //change button back
-      $(this).css("background-color", "rgb(230, 230, 230)");
+      $(this).css("background-color", "rgb(255, 255, 255)");
       $(this).css("color", "rgb(51, 51, 51)");
 
       var voteBackCount = parseInt($(this).text());
