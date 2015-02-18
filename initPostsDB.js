@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var models   = require('./models');
 
 // Connect to the Mongo database, whether locally or on Heroku
-// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER userlogin
+// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER posts
 var local_database_name = 'lab7';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
@@ -25,10 +25,10 @@ mongoose.connect(database_uri);
 // Do the initialization here
 
 // Step 1: load the JSON data
-var userlogin_json = require('./userlogin.json');
+var posts_json = require('./data.json');
 
 // Step 2: Remove all existing documents
-models.Project
+models.Posts
   .find()
   .remove()
   .exec(onceClear); // callback to continue at
@@ -37,12 +37,12 @@ models.Project
 function onceClear(err) {
   if(err) console.log(err);
 
-  // loop over the userlogin, construct and save an object from each one
+  // loop over the posts, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
-  var to_save_count = userlogin_json.length;
-  for(var i=0; i<userlogin_json.length; i++) {
-    var json = userlogin_json[i];
-    var proj = new models.Project(json);
+  var to_save_count = posts_json.length;
+  for(var i=0; i<posts_json.length; i++) {
+    var json = posts_json[i];
+    var proj = new models.Posts(json);
 
     proj.save(function(err, proj) {
       if(err) console.log(err);

@@ -2,13 +2,13 @@
 var Mongoose = require('mongoose');
 
 
-var UserLoginSchema = new Mongoose.Schema({
+var PostsSchema = new Mongoose.Schema({
   		"title": String,
-		"date": Date,
-		"summary": String,
-		"image": String
+		"content": String,
+		"upvotes": Number,
+		"downvotes": Number
 });
 
-exports.UserLogin = Mongoose.model('UserLogin', UserLoginSchema);
+exports.Posts = Mongoose.model('Posts', PostsSchema);
 
 

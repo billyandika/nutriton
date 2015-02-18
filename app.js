@@ -12,7 +12,6 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var landing = require('./routes/landing');
 // Example route
-// var user = require('./routes/user');
 var add = require('./routes/add');
 var foodfinder = require('./routes/foodfinder');
 var messages = require('./routes/messages');
@@ -25,7 +24,7 @@ var pines = require('./routes/pines');
 var roots = require('./routes/roots');
 
 // Connect to the Mongo database, whether locally or on Heroku
-// var local_database_name = 'userlogin'; // user login database
+// var local_database_name = 'posts'; // user login database
 // var local_database_uri  = 'mongodb://localhost/' + local_database_name
 // var database_uri = process.env.MONGOLAB_URI || local_database_uri
 // mongoose.connect(database_uri);
