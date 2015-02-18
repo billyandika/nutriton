@@ -28,13 +28,17 @@
 	}
 
 	.jumbotron, .panel-body {
-		background-color: #f8faef;
+		background-color: #e9f1d0;
 	}
 	
-	.navbar-brand {
+	.jumbotron h1 {
 		font-family: "Pacifico", serif;
-		font-size: 22pt;
-		text-shadow: 2px 2px 3px #17A57D;
+		font-size: 4em;
+		color: #87b822;
+	}
+
+	.login-collapse {
+		color: #eff2df;
 	}
 
 
@@ -107,13 +111,9 @@
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header"> 
-				<a href="index" class="navbar-brand">nuTriton </a> 
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-
+				<!-- <a href="index" class="navbar-brand">nuTriton </a>  -->
+				<button type="button" class="navbar-toggle login-collapse" data-toggle="collapse" data-target=".navbar-collapse">
+					Login
 				</button>
 			</div>
 
@@ -138,8 +138,8 @@
 	</div>
 
 	<div class="container">
-		<div class="jumbotron">
-			<h1>nuTriton</h1>
+		<div class="jumbotron text-center">
+			<h1 >Welcome to nuTriton</h1>
 			<br/>
 			<p>The one-stop place to find the foods suitable for your diet.</p>
 			<p> Connect with others of the same dietary restrictions, share what's new in your life.</p>
