@@ -1,14 +1,11 @@
 
 var Mongoose = require('mongoose');
 
-
-var PostsSchema = new Mongoose.Schema({
+var PostSchema = new Mongoose.Schema({
   		"title": String,
 		"content": String,
 		"upvotes": Number,
 		"downvotes": Number
 });
 
-exports.Posts = Mongoose.model('Posts', PostsSchema);
-
-
+exports.Post = Mongoose.model('Post', PostSchema);
