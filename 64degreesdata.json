@@ -1,0 +1,34 @@
+{
+	"64degreesposts": [
+		{
+			"name": "Gardein Burger",
+			"type": "Vegetarian",
+			"upvotes": "8",
+			"downvotes": "0"
+		},
+		{
+			"name": "Sweet Potato Fries",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "2"
+		},
+		{
+			"name": "Curry Tofu Bowl",
+			"type": "Vegetarian, Gluten-friendly",
+			"upvotes": "11",
+			"downvotes": "1"
+		},
+		{
+			"name": "Sweet Potato Fries",
+			"type": "Vegetarian",
+			"upvotes": "7",
+			"downvotes": "1"
+		},
+		{
+			"name": "Curry Tofu Bowl",
+			"type": "Vegetarian, Gluten-friendly",
+			"upvotes": "17",
+			"downvotes": "3"
+		}
+	]
+}

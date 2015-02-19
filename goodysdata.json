@@ -1,0 +1,40 @@
+{
+	"goodysposts": [
+		{
+			"name": "Thai Pasta Salad",
+			"type": "Vegetarian",
+			"upvotes": "8",
+			"downvotes": "0"
+		},
+		{
+			"name": "Tomato Cucumber Salad",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "2"
+		},
+		{
+			"name": "Achiote Chicken Bowl",
+			"type": "Gluten-friendly",
+			"upvotes": "11",
+			"downvotes": "1"
+		},
+		{
+			"name": "Carnitas Bowl",
+			"type": "Gluten-friendly",
+			"upvotes": "7",
+			"downvotes": "1"
+		},
+		{
+			"name": "Tofu Fajita Burrito",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "3"
+		},
+		{
+			"name": "Carne Asada",
+			"type": "Gluten-friendly",
+			"upvotes": "5",
+			"downvotes": "1"
+		}
+	]
+}

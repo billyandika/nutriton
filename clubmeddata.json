@@ -1,0 +1,40 @@
+{
+	"clubmedposts": [
+		{
+			"name": "Green Toss Salad",
+			"type": "Vegan, Vegetarian",
+			"upvotes": "8",
+			"downvotes": "0"
+		},
+		{
+			"name": "California Caprese Sandwich",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "2"
+		},
+		{
+			"name": "Thai Salad",
+			"type": "Vegetarian",
+			"upvotes": "11",
+			"downvotes": "1"
+		},
+		{
+			"name": "Roasted Vegetable Sandwich",
+			"type": "Vegetarian",
+			"upvotes": "7",
+			"downvotes": "1"
+		},
+		{
+			"name": "Vegetarian Chili Soup",
+			"type": "Vegetarian, Gluten-friendly",
+			"upvotes": "17",
+			"downvotes": "3"
+		},
+		{
+			"name": "BBQ Chicken Flatbread",
+			"type": "Vegetarian",
+			"upvotes": "5",
+			"downvotes": "1"
+		}
+	]
+}

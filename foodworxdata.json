@@ -1,0 +1,16 @@
+{
+	"foodworxposts": [
+		{
+			"name": "Cheese Pizza",
+			"type": "Vegetarian",
+			"upvotes": "8",
+			"downvotes": "0"
+		},
+		{
+			"name": "Vegetarian Pizza",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "2"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"bistroposts": [
+		{
+			"name": "Fresh Spring Rolls",
+			"type": "Vegetarian",
+			"upvotes": "8",
+			"downvotes": "0"
+		},
+		{
+			"name": "Vegetable Tempura",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "2"
+		},
+		{
+			"name": "Bistro Green Salad",
+			"type": "Vegan, Gluten-friendly",
+			"upvotes": "11",
+			"downvotes": "1"
+		},
+		{
+			"name": "Green Papaya Sandwich",
+			"type": "Gluten-friendly",
+			"upvotes": "7",
+			"downvotes": "1"
+		},
+		{
+			"name": "Tofu Pho",
+			"type": "Vegetarian",
+			"upvotes": "17",
+			"downvotes": "3"
+		},
+		{
+			"name": "Spicy Yellow Curry Seared Tofu",
+			"type": "Vegetarian",
+			"upvotes": "5",
+			"downvotes": "1"
+		},
+		{
+			"name": "Kihada Roll Sushi",
+			"type": "Gluten-friendly",
+			"upvotes": "8",
+			"downvotes": "3"
+		},
+		{
+			"name": "Sun God Sushi",
+			"type": "Gluten-friendly",
+			"upvotes": "5",
+			"downvotes": "1"
+		}
+	]
+}
