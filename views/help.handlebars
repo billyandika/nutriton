@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nuTriton</title>
+
+    <!-- Font -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- Lightbox -->
+	<link href="css/lightbox.css" rel="stylesheet" />
+    
+    <style>
+
+	body {
+		background-color: #e9f1d0;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 160%;
+	}
+
+	h3 {
+		margin: 0px;
+		padding:10px 0px 0px 0px;
+	}
+
+	.jumbotron {
+		background-color: #f8faef;
+		padding: 30px;
+	}
+
+	.panel-body {
+		background-color: #f8faef;
+	}
+	
+	.navbar-brand {
+		font-family: "Pacifico", serif;
+		font-size: 22pt;
+		text-shadow: 2px 2px 3px #17A57D;
+	}
+
+	/* Custom style for the selector buttons */
+	.selectButton {
+		font-size:1em;
+	}
+
+	
+.navbar-default {
+  background-color: #87b822;
+  border-color: #87b822;
+}
+.navbar-default .navbar-brand {
+  color: #d4dca8;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #d4dca8;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #d4dca8;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #87b822;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #87b822;
+}
+.navbar-default .navbar-toggle {
+  border-color: #87b822;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #87b822;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #d4dca8;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #d4dca8;
+}
+.navbar-default .navbar-link {
+  color: #d4dca8;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #d4dca8;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #87b822;
+  }
+}
+    </style>
+
+  </head>
+  <body>
+    <!-- NAVBAR -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header"> 
+        <a href="index" class="navbar-brand">nuTriton </a> 
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li > <a href="index" > Home </a></li>
+          <li > <a href="foodfinder" > Food Finder </a></li>
+          <li > <a href="messages"> Messages </a></li>
+          <li class="active"> <a href="profile" >Profile </a></li>
+          <li> <a href="/" > Log Out </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container"></div>
+    </br>
+    </br>
+    </br>
+    </br>
+  </div>
+  <h1>Help Page</h1>
+  <p>This is a food-finding tool to help you find the nutrients you need if you have allergies. It is mainly for students who live on-campus at UC San Diego.</p>
+  <br>
+  <p>The Home page is for posting any reviews, recipes, advice, or questions. The Food Finder gives you a list of foods in each dining hall that are vegetarian, vegan, or gluten-friendly; there is also a display of each food's upvotes and downvotes. Since this is a network of people who may share similar diets as you, you can message other users to further conversate about any questions or suggestions based on the posts made. Your profile page contains a list of your posts as well as your favorites. Hope you enjoy fueling your taste buds! </p>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  
+  <!-- The following two js are Lightbox jquery scripts -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/nutriton.js"></script>
+  
+  </body>
+</html>
