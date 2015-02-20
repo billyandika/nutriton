@@ -1,6 +1,14 @@
-var data = require('../data.json');
+
+var models = require('../models');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render('index', data);
+	models.Post
+		.find()
+		.exec(renderPosts);
+
+	function renderPosts(err, posts) {
+		res.render('index', { 'posts': posts });
+	}
+
 };
+	

@@ -10,11 +10,12 @@ var handlebars = require('express3-handlebars')
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var landing = require('./routes/landing');
+var post = require('./routes/post');
 // Example route
+var landing = require('./routes/landing');
 var add = require('./routes/add');
 var foodfinder = require('./routes/foodfinder');
-var messages = require('./routes/messages');
+var help = require('./routes/help');
 var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
@@ -55,8 +56,11 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/',landing.view)
 app.get('/index', index.view);
-app.get('/add', add.addPost);
-app.get('/messages', messages.view);
+// app.get('/add', add.addPost);
+app.get('/index/post/:id', post.postInfo);
+app.post('/index/post/new', post.addPost);
+
+app.get('/help', help.view);
 app.get('/foodfinder', foodfinder.view);
 app.get('/profile', profile.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
