@@ -20,9 +20,17 @@ var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
 var addroots = require('./routes/addroots');
+
 var canyonvista = require('./routes/canyonvista');
 var pines = require('./routes/pines');
 var roots = require('./routes/roots');
+var bistro = require('./routes/bistro');
+var cafev = require('./routes/cafev');
+var clubmed = require('./routes/clubmed');
+var foodworx = require('./routes/foodworx');
+var goodys = require('./routes/goodys');
+var ovt = require('./routes/ovt');
+var sixtyfourdegrees = require('./routes/sixtyfourdegrees');
 
 // Connect to the Mongo database, whether locally or on Heroku
 var local_database_name = 'nutriton';
@@ -69,6 +77,14 @@ app.get('/addroots', addroots.addMenu);
 app.get('/canyonvista', canyonvista.view);
 app.get('/pines', pines.view);
 app.get('/roots', roots.view);
+
+app.get('/bistro', bistro.view);
+app.get('/cafev', cafev.view);
+app.get('/clubmed', clubmed.view);
+app.get('/foodworx', foodworx.view);
+app.get('/goodys', goodys.view);
+app.get('/ovt', ovt.view);
+app.get('/sixtyfourdegrees', sixtyfourdegrees.view);
 
 // Example route
 // app.get('/users', user.list);

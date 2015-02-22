@@ -164,10 +164,10 @@
 	<div class="container">
 		<div class="panel panel-default ">
   			<div class="panel-body">
-  				<h3>Cafe V</h3>
+  				<h3>Bistro</h3>
 	  				<br/>
-		  			{{#each cafevData.cafevposts}}
-		 			<div class="cafevposts">
+		  			{{#each bistroData.bistroposts}}
+		 			<div class="bistroposts">
 		        		<h4>
 		    			{{name}}  ({{type}})
 		    			<br/>
@@ -178,7 +178,7 @@
 		    		{{/each}}
 		    		<br/>
 
-				    <form id="addcafevForm" role="form" method="get" action="/addcafev">
+				    <form id="addbistroForm" role="form" method="get" action="/addbistro">
 					    <h4><strong>Add Menu</strong></h4>
 					    <div class="form-group form-inline">
 					      	<label for="name">Name:</label>
