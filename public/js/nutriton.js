@@ -8,7 +8,60 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
+function initializePage() {
 
+     $(".upvote").click(increaseVote);
+        $(".downvote").click(decreaseVote);
+        $(".favorite").click(fillStar);
+
+    $('.post a').click(function(e) {
+      e.preventDefault();
+
+      var postID = $(this).closest('.post').attr('id');
+      var idNumber = postID.substr('post'.length);
+      var url_call = '/index/post/'+idNumber;
+
+      function addProjectDetails(project_json) {
+
+        // compose the HTML
+        var new_html =
+          '<br/> <button class="post-delete btn btn-default" type="button">Delete Post</button>';
+
+        // get the DIV to add content to
+        var details_div = $('#post' + idNumber + ' .details');
+        // add the content to the DIV
+        details_div.html(new_html);
+
+        details_div.find('.post-delete').click(function(e) {
+          $.post('/index/post/'+idNumber+'/delete', function() {
+            window.location.href = '/index';
+          });
+        });
+      }
+
+      // issue the GET request
+      $.get(url_call, addProjectDetails);
+    });
+
+    $('#newPostSubmitButton').click(function(e) {
+      console.log('clicked');
+      var title = $('#new-post-form #title').val();
+      var content = $('#new-post-form #content').val();
+      var json = {
+        'post_title': title,
+        'content': content
+      };
+      $.post('/index/post/new', json, function() {
+        window.location.href = '/index'; // reload the page
+      });
+    });
+
+    $(".comments-toggle").click(function(){
+      console.log("clicked on comments");
+      $(".comments").toggle();
+    });
+  }
+  
 function fillStar(e) {
     e.preventDefault();
     
