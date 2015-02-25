@@ -173,31 +173,34 @@
 		{{#each posts}}
 		<div class="panel panel-default ">
 			<div class="panel-body">
- 				<div class="post" id="post{{id}}">
+ 				<div class="post" id="post{{id}}">				
         		<h3>{{title}}</h3>
         		<br/>
         		<p>{{content}}</p>
         		<br/>
         		<button type="button" class="upvote btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
     			<button type="button" class="downvote btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
-    			<button type="button" class="btn btn-default comments-toggle">Comments</button>
+    			<a href="#"><button type="button" class="btn btn-default">Options</button></a>
 				<button type="button" class="btn btn-default favorite pull-right"><span class="glyphicon glyphicon-star-empty"></span></button>
+				<div class="details"></div>
     			</div>
-    			<div class="comments" style="display:none;">
+
+    		</div>
+    	</div>
+    	{{/each}}
+    	
+    	<!--     			<div class="comments" style="display:none;">
     				<br/>
-    				<!-- {{comments}} -->
+    				{{comments}}
     				<form id="addFriendForm" role="form" method="get" action="/addcomment">
 				    <div class="form-group">
 				      	<input type="text" class="form-control" id="title" placeholder="Add comment..." name="title">
 				    </div>
 				    <input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input>
 				</form>
-    			</div>
-    		</div>
-    	</div>
-    	{{/each}}
-    	
-    	<div class="panel panel-default ">
+    			</div> -->
+
+    	<div class="panel panel-default post" id="post{{id}}">
 			<div class="panel-body">
 			    <form id="new-post-form" role="form" method="get" action="/add">
 				    <div class="form-group">
@@ -209,7 +212,7 @@
 				     	<input type="text" class="form-control" id="content" placeholder="Content" name="content">
 				    </div>
 				   	<a name="bottom">
-				    <button type="button" id="newPostSubmitBtn" class="btn btn-default">Post</button>
+				    <button type="button" id="newPostSubmitButton" class="btn btn-default">Post</button>
 				</form>
 			</div>
 		</div>
@@ -227,23 +230,56 @@
 	<script src="js/nutriton.js"></script>
 
 	<script>
-	$(".comments-toggle").click(function(){
-		$(".comments").toggle();
-	});
+	
 
-	$('#newPostSubmitButton').click(function(e) {
-		console.log('clicked');
-		var title = $('#new-post-form #title').val();
-		var content = $('#new-post-form #content').val();
-		var json = {
-			'post_title': title,
-			'content': content
-		};
-		$.post('/index/post/new', json, function() {
-			window.location.href = '/index'; // reload the page
+	function initializePage() {
+		$('.post a').click(function(e) {
+			e.preventDefault();
+
+			var postID = $(this).closest('.post').attr('id');
+			var idNumber = postID.substr('post'.length);
+			var url_call = '/index/post/'+idNumber;
+
+			function addProjectDetails(project_json) {
+
+				// compose the HTML
+				var new_html =
+					'<br/> <button class="post-delete btn btn-default" type="button">Delete Post</button>';
+
+				// get the DIV to add content to
+				var details_div = $('#post' + idNumber + ' .details');
+				// add the content to the DIV
+				details_div.html(new_html);
+
+				details_div.find('.post-delete').click(function(e) {
+					$.post('/index/post/'+idNumber+'/delete', function() {
+						window.location.href = '/index';
+					});
+				});
+			}
+
+			// issue the GET request
+			$.get(url_call, addProjectDetails);
 		});
-	});
 
+		$('#newPostSubmitButton').click(function(e) {
+			console.log('clicked');
+			var title = $('#new-post-form #title').val();
+			var content = $('#new-post-form #content').val();
+			var json = {
+				'post_title': title,
+				'content': content
+			};
+			$.post('/index/post/new', json, function() {
+				window.location.href = '/index'; // reload the page
+			});
+		});
+
+		$(".comments-toggle").click(function(){
+			console.log("clicked on comments");
+			$(".comments").toggle();
+		});
+	}
 	</script>
 	
   </body>

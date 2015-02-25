@@ -8,10 +8,10 @@ exports.postInfo = function(req, res) { 
 
   models.Post.find({"_id" : postID}).exec(afterQuery);
 
-  function afterQuery(err, projects) {
+  function afterQuery(err, posts) {
     console.log("test1");
     if(err) console.log(err);
-    res.json(post[0]);
+    res.json(posts[0]);
   }
 }
 
@@ -38,17 +38,17 @@ exports.addPost = function(req, res) {
   // YOU MUST send an OK response w/ res.send();
 }
 
-// exports.deleteProject = function(req, res) {
-//   var projectID = req.params.id;
+exports.deletePost = function(req, res) {
+  var postID = req.params.id;
 
-//   models.Project.find({"_id" : projectID}).remove().exec(deleteCallback);
+  models.Post.find({"_id" : postID}).remove().exec(deleteCallback);
 
-//   function deleteCallback(err, projects) {
-//     if(err) { console.log(err); res.send(500);}
-//     res.send();
-//   }
+  function deleteCallback(err, posts) {
+    if(err) { console.log(err); res.send(500);}
+    res.send();
+  }
 
 
-//   // find the project and remove it
-//   // YOU MUST send an OK response w/ res.send();
-// }
+  // find the project and remove it
+  // YOU MUST send an OK response w/ res.send();
+}

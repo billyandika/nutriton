@@ -13,7 +13,6 @@ var index = require('./routes/index');
 var post = require('./routes/post');
 // Example route
 var landing = require('./routes/landing');
-var add = require('./routes/add');
 var foodfinder = require('./routes/foodfinder');
 var help = require('./routes/help');
 var profile = require('./routes/profile');
@@ -64,10 +63,11 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/',landing.view)
 app.get('/index', index.view);
-// app.get('/add', add.addPost);
 app.get('/index/post/:id', post.postInfo);
 app.post('/index/post/new', post.addPost);
+app.post('/index/post/:id/delete', post.deletePost);
 
+// Other pages
 app.get('/help', help.view);
 app.get('/foodfinder', foodfinder.view);
 app.get('/profile', profile.view);
