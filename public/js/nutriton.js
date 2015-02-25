@@ -10,9 +10,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-     $(".upvote").click(increaseVote);
-        $(".downvote").click(decreaseVote);
-        $(".favorite").click(fillStar);
+    $(".upvote").click(increaseVote);
+    $(".downvote").click(decreaseVote);
+    $(".favorite").click(fillStar);
 
     $('.post a').click(function(e) {
       e.preventDefault();
@@ -58,7 +58,14 @@ function initializePage() {
 
     $(".comments-toggle").click(function(){
       console.log("clicked on comments");
-      $(".comments").toggle();
+      if($(this).css("background-color") == "rgb(255, 255, 255)") {
+        $(this).css("background-color", "rgb(233, 241, 208)");
+        $(this).parent().parent().next().toggle();
+      }
+      else {
+        $(this).css("background-color", "rgb(255, 255, 255)");
+        $(this).parent().parent().next().toggle();  
+      }
     });
   }
   
