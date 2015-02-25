@@ -8,11 +8,6 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() {
-      $(".upvote").click(increaseVote);
-      $(".downvote").click(decreaseVote);
-      $(".favorite").click(fillStar);
-}
 
 function fillStar(e) {
     e.preventDefault();

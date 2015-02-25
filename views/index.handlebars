@@ -233,6 +233,11 @@
 	
 
 	function initializePage() {
+
+		 $(".upvote").click(increaseVote);
+      	$(".downvote").click(decreaseVote);
+      	$(".favorite").click(fillStar);
+
 		$('.post a').click(function(e) {
 			e.preventDefault();
 
