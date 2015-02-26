@@ -11,7 +11,7 @@ exports.addMenu = function(req, res) {
 		'downvotes': 0
 	}
 
-	bistrodata["bistrodataposts"].push(newMenu);
+	bistrodata["bistroposts"].push(newMenu);
 	
 	res.render('bistro', {"bistroData": bistrodata});
 };

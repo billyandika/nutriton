@@ -19,6 +19,13 @@ var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
 var addroots = require('./routes/addroots');
+var addbistro = require('./routes/addbistro');
+var addcafev = require('./routes/addcafeventanas');
+var addclubmed = require('./routes/addclubmed');
+var addfoodworx = require('./routes/addfoodworx');
+var addgoodys = require('./routes/addgoodys');
+var addovt = require('./routes/addovt');
+var addsixtyfourdegrees = require('./routes/addsixtyfourdegrees');
 
 var canyonvista = require('./routes/canyonvista');
 var pines = require('./routes/pines');
@@ -74,10 +81,17 @@ app.get('/profile', profile.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
 app.get('/addpines', addpines.addMenu);
 app.get('/addroots', addroots.addMenu);
+app.get('/addbistro', addbistro.addMenu);
+app.get('/addcafev', addcafev.addMenu);
+app.get('/addclubmed', addclubmed.addMenu);
+app.get('/addfoodworx', addfoodworx.addMenu);
+app.get('/addgoodys', addgoodys.addMenu);
+app.get('/addovt', addovt.addMenu);
+app.get('/addsixtyfourdegrees', addsixtyfourdegrees.addMenu);
+
 app.get('/canyonvista', canyonvista.view);
 app.get('/pines', pines.view);
 app.get('/roots', roots.view);
-
 app.get('/bistro', bistro.view);
 app.get('/cafev', cafev.view);
 app.get('/clubmed', clubmed.view);
