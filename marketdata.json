@@ -1,0 +1,46 @@
+{
+	"marketposts": [
+		{
+			"name": "Glutino Cracker's and Bars",
+			"type": "Gluten-free",
+			"upvotes": "3",
+			"downvotes": "1"
+		},
+		{
+			"name": "Evol Burritos and Bowls",
+			"type": "Gluten-free",
+			"upvotes": "1",
+			"downvotes": "1"
+		},
+		{
+			"name": "Triangle Tuna Salad",
+			"type": "Kosher",
+			"upvotes": "3",
+			"downvotes": "0"
+		},
+		{
+			"name": "Tofurky Products",
+			"type": "Vegan",
+			"upvotes": "2",
+			"downvotes": "1"
+		},
+		{
+			"name": "Gardien Sandwiches",
+			"type": "Vegan",
+			"upvotes": "1",
+			"downvotes": "0"
+		},
+		{
+			"name": "Grilled Chicken Combo",
+			"type": "Kosher",
+			"upvotes": "3",
+			"downvotes": "1"
+		},
+		{
+			"name": "Saffron Road Entrees",
+			"type": "Gluten-free",
+			"upvotes": "2",
+			"downvotes": "0"
+		}
+	]
+}

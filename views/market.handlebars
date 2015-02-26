@@ -101,7 +101,6 @@
   }
 }
 
-
     </style>
 
   </head>
@@ -111,7 +110,7 @@
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li> <a href="foodfinder" ><span class="glyphicon glyphicon-chevron-left"></span>Back </a></li>
+			<li><a href="foodfinder" ><span class="glyphicon glyphicon-chevron-left"></span>Back </a></li>
 			</ul>
 		</div>
 	</div>
@@ -125,11 +124,11 @@
 	<div class="container">
 		<div class="panel panel-default ">
   			<div class="panel-body">
-  				<h3>Club Med</h3>
-  				<h4>Location: School of Medicine</h4>
+  				<h3>All Markets</h3>
+  					<h4>Location: Warren (Earl's Place and Market), Sixth (Sixth Market), The Village (The Market), Marshall (Goody's Market), Revelle (Roger's Market), Muir (John's Market)
 	  				<br/>
-		  			{{#each clubmedData.clubmedposts}}
-		 			<div class="clubmedposts">
+		  			{{#each marketData.marketposts}}
+		 			<div class="marketposts">
 		        		<h4>
 		    			{{name}}  ({{type}})
 		    			<br/>
@@ -140,7 +139,7 @@
 		    		{{/each}}
 		    		<br/>
 
-				    <form id="addclubmedForm" role="form" method="get" action="/addclubmed">
+				    <form id="addmarketForm" role="form" method="get" action="/addmarket">
 					    <h4><strong>Add Menu</strong></h4>
 					    <div class="form-group form-inline">
 					      	<label for="name">Name:</label>
