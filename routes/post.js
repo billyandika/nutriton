@@ -24,6 +24,8 @@ exports.addPost = function(req, res) {
   var newPost = new models.Post({
     "title": form_data.post_title,
     "content": form_data.content,
+    "upvotes": form_data.upvotes,
+    "downvotes": form_data.downvotes
   });
   newPost.save(afterSaving);
 

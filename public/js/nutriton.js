@@ -49,7 +49,9 @@ function initializePage() {
       var content = $('#new-post-form #content').val();
       var json = {
         'post_title': title,
-        'content': content
+        'content': content,
+        'upvotes': 0,
+        'downvotes': 0
       };
       $.post('/index/post/new', json, function() {
         window.location.href = '/index'; // reload the page
