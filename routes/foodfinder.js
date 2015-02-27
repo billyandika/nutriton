@@ -1,4 +1,9 @@
 exports.view = function(req, res){
-	res.render('foodfinder');
-};
+  var random_num = Math.random();
 
+  if(random_num > 0.5){
+    res.render("foodfinder");
+  }else{
+    res.render("foodfinderalternative");
+  }
+};

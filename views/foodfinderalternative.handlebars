@@ -7,56 +7,57 @@
     <title>nuTriton</title>
     <link rel="shortcut icon" href="images/leaf.ico">
     <!-- Font -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<!-- Lightbox -->
-	<link href="css/lightbox.css" rel="stylesheet" />
+  	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  	<!-- Lightbox -->
+  	<link href="css/lightbox.css" rel="stylesheet" />
     
+    {{> tracking_code_script}}
+
     <style>
+  	body {
+  		background-color: #e9f1d0;
+  		font-family: 'Source Sans Pro', sans-serif;
+  		font-size: 160%;
+  	}
 
-	body {
-		background-color: #e9f1d0;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 160%;
-	}
+  	h3 {
+  		margin: 0px;
+  		padding:10px 0px 0px 0px;
+  	}
+  	h4 {
+  		clear:both;
+  	}
+    /*	.panel-body {
+    		background-color: #f8faef;
+    	}*/
+  	
+  	.navbar-brand {
+  		font-family: "Pacifico", serif;
+  		font-size: 22pt;
+  		text-shadow: 2px 2px 3px #17A57D;
+  	}
 
-	h3 {
-		margin: 0px;
-		padding:10px 0px 0px 0px;
-	}
-	h4 {
-		clear:both;
-	}
-/*	.panel-body {
-		background-color: #f8faef;
-	}*/
-	
-	.navbar-brand {
-		font-family: "Pacifico", serif;
-		font-size: 22pt;
-		text-shadow: 2px 2px 3px #17A57D;
-	}
+    .container {
+      padding:0px;
+    }
 
-  .container {
-    padding:0px;
-  }
+    .panel-body {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 3px;
+    }
+    
+    .panel-default {
+      margin-top:5px;
+      margin-bottom:2px;
+    }
 
-  .panel-body {
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 3px;
-  }
-  
-  .panel-default {
-    margin-top:5px;
-    margin-bottom:2px;
-  }
-
-  a {
-    color: #3f5610;
-  }
+    a {
+      color: #3f5610;
+    }
 	
 .navbar-default {
   background-color: #87b822;
@@ -152,102 +153,96 @@
   <body>
 
   	<!-- NAVBAR -->
+
 	<div class="navbar navbar-default navbar-fixed-top">
-			<div class="navbar-header"> 
-				<a href="index" class="navbar-brand">nuTriton </a> 
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="index" > Home </a></li>
-					<li class="active"> <a href="foodfinder" > Food Finder </a></li>
-					<li> <a href="profile" >Profile </a></li>
-					<li> <a href="help"> Help </a></li>
-					<li> <a href="/" > Log Out </a></li>
-				</ul>
-			</div>
+			<div class="container">
+        <div class="navbar-header"> 
+				  <a href="index" class="navbar-brand">nuTriton </a> 
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  	<span class="sr-only">Toggle navigation</span>
+				  	<span class="icon-bar"></span>
+				  	<span class="icon-bar"></span>
+				  	<span class="icon-bar"></span>
+				  </button>
+			  </div>
+			  <div class="collapse navbar-collapse">
+				  <ul class="nav navbar-nav navbar-right">
+					 <li> <a href="index" > Home </a></li>
+					 <li class="active"> <a href="foodfinder" > Food Finder </a></li>
+					 <li> <a href="profile" >Profile </a></li>
+					 <li> <a href="help"> Help </a></li>
+					 <li> <a href="/" > Log Out </a></li>
+				  </ul>
+			 </div>
+      </div>
 		</div>
 	</div>
 
-		</br>
-		</br>
-		</br>
-
-		<!-- 
-		<div class="google-maps">
-
-		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13402.617189694329!2d-117.23119452590333!3d32.880864988683385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smarkets!5e0!3m2!1sen!2sus!4v1423084181223" width="600" height="450" frameborder="0" style="border:0"></iframe>
-
-		<iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCAoXsjsTgbqzLrJUTVX5UQntWrX6tnzNM&q=markets+ucsd"> </iframe>
-
-		</div> -->
-    <div class="container">
-
+	</br>
+	</br>
+	</br>
+  
+  <div class="container">
 		<div id="mapContainer"></div>
     <br/>
 		
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="panel-body">
-          <h3><a href="market">All Markets</a></h3>
+          <h3><a href="market" class="version_b">All Markets</a></h3>
         </div>
     </div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="canyonvista">Canyon Vista </a></h3>
+  				<h3><a href="canyonvista" class="version_b">Canyon Vista </a></h3>
   			</div>
 		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 			<div class="panel-body">
-  				<h3><a href="pines">Pines</a></h3>
+  				<h3><a href="pines" class="version_b">Pines</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="roots">Roots</a></h3>
+  				<h3><a href="roots" class="version_b">Roots</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="bistro">The Bistro</a></h3>
+  				<h3><a href="bistro" class="version_b">The Bistro</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="cafev">Cafe Ventanas</a></h3>
+  				<h3><a href="cafev" class="version_b">Cafe Ventanas</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="clubmed">Club Med</a></h3>
+  				<h3><a href="clubmed" class="version_b">Club Med</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="foodworx">Foodworx</a></h3>
+  				<h3><a href="foodworx" class="version_b">Foodworx</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="goodys">Goody's</a></h3>
+  				<h3><a href="goodys" class="version_b">Goody's</a></h3>
   			</div>
   		</div>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   			<div class="panel-body">
-  				<h3><a href="ovt">OVT</a></h3>
+  				<h3><a href="ovt" class="version_b">OVT</a></h3>
   			</div>
   		</div>
 
