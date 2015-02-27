@@ -14,6 +14,7 @@ var post = require('./routes/post');
 // Example route
 var landing = require('./routes/landing');
 var foodfinder = require('./routes/foodfinder');
+var foodfinderalternative = require('./routes/foodfinderalternative');
 var help = require('./routes/help');
 var profile = require('./routes/profile');
 var addcanyonvista = require('./routes/addcanyonvista');
@@ -79,6 +80,8 @@ app.post('/index/post/:id/delete', post.deletePost);
 // Other pages
 app.get('/help', help.view);
 app.get('/foodfinder', foodfinder.view);
+app.get('/foodfinderalternative', foodfinderalternative.view);
+
 app.get('/profile', profile.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
 app.get('/addpines', addpines.addMenu);
