@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nuTriton</title>
+    <link rel="shortcut icon" href="images/leaf.ico">
+    <!-- Font -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- Lightbox -->
+	<link href="css/lightbox.css" rel="stylesheet" />
+    <!-- Dining/market CSS -->
+    <link href="css/diningmarket.css" rel="stylesheet" />
+
+    {{> tracking_code_script}}
+
+    <style>
+
+	body {
+		background-color: #e9f1d0;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 160%;
+	}
+
+	h3 {
+		margin: 0px;
+		padding:10px 0px 0px 0px;
+	}
+	h4 {
+		clear:both;
+	}
+	.panel-body {
+		background-color: #f8faef;
+	}
+	
+	.navbar-brand {
+		font-family: "Pacifico", serif;
+		font-size: 22pt;
+		text-shadow: 2px 2px 3px #17A57D;
+	}
+
+    </style>
+
+  </head>
+  <body>
+
+  	<!-- NAVBAR -->
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<ul class="nav navbar-nav">
+				<li> <a href="foodfinder" class="back"><span class="glyphicon glyphicon-chevron-left"></span>Back </a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container"></div>
+		</br>
+		</br>
+		</br>
+		</br>
+	</div>
+
+	<div class="container">
+		<div class="panel panel-default ">
+  			<div class="panel-body">
+  				<h3>64 Degrees</h3>
+  				<h4>Location: Revelle</h4>
+	  				<br/>
+		  			{{#each sixtyfourdegreesData.sixtyfourdegreesposts}}
+		 			<div class="sixtyfourdegreesposts">
+		        		<h4>
+		    			{{name}}  ({{type}})
+		    			<br/>
+		    			<button type="button" class="btn btn-default btn-sm upvote"><span class="glyphicon glyphicon-thumbs-up"></span> {{upvotes}}</button>
+		    			<button type="button" class="btn btn-default btn-sm downvote"><span class="glyphicon glyphicon-thumbs-down"></span> {{downvotes}}</button>
+		    			</h4>
+		    		</div>
+		    		{{/each}}
+		    		<br/>
+
+				    <form id="addsixtyfourdegreesForm" role="form" method="get" action="/addsixtyfourdegrees">
+					    <h4><strong>Add Menu</strong></h4>
+					    <div class="form-group form-inline">
+					      	<label for="name">Name:</label>
+					      	<input type="text" class="form-control" id="name" placeholder="e.g. fish" name="name">
+					    </div>
+					    <div class="form-group form-inline">
+					    <label for="type">Type:</label>
+					     	<input type="text" class="form-control" id="type" placeholder="e.g. Gluten-free" name="type">
+					    </div>
+					    <input type="submit" id="submitBtn" class="btn btn-default addMenuButton" value="Post"></input>
+					</form>
+  			</div>
+		</div>
+
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- The following two js are Lightbox jquery scripts -->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	<script src="js/nutriton.js"></script>
+
+  </body>
+</html>
