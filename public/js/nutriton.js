@@ -1,5 +1,9 @@
 'use strict';
 
+(function(){
+        var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
     initializePage();
@@ -12,13 +16,15 @@ function initializePage() {
 
     $(".version_a").click(function(){
       woopra.track("a_version_like_click");
+      console.log("clicked A");
       //add your Woopra tracking code for version A's like button click event
-    })
+    });
 
     $(".version_b").click(function(){
       woopra.track("b_version_like_click");
-    //add your Woopra tracking code for version A's like button click event
-    })
+      console.log("clicked B");
+      //add your Woopra tracking code for version A's like button click event
+    });
 
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
@@ -97,6 +103,7 @@ function fillStar(e) {
 }
 
 function increaseVote(e) {
+
     e.preventDefault();
     
     //colors used, like and dislike: rgb(135, 184, 34) rgb(235, 138, 131)
@@ -129,11 +136,14 @@ function increaseVote(e) {
       //decrement this button
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteBackCount-1));
     }
-    
+
+    // woopra.track("upvote_click");
+    console.log("clicked upvote");
 }
 
 function decreaseVote(e) {
   e.preventDefault();
+
 
   if($(this).css("color") == "rgb(51, 51, 51)") {
         //check if other button has been selected already
@@ -165,6 +175,7 @@ function decreaseVote(e) {
       //decrement this button
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (voteBackCount-1));
     }
-  
+    woopra.track("downvote_click");
+
 }
 
