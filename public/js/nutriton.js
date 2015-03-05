@@ -23,22 +23,26 @@ function initializePage() {
       time: 3000 // hang on the screen for...
     });*/
         
-    $('#add-without-image').click(function(){
-
-      $.gritter.add({
+    $('#add-without-image').click(function(e){
+      e.preventDefault();
         if(this.hasClass("indexpage")) {
-          title: 'How to use the Feed:',
-          text: 'Like, upvote, downvote, or create posts.'
+          $.gritter.add({
+            title: 'How to use the Feed:',
+            text: 'Like, upvote, downvote, or create posts.'
+            });
           }
         else if(this.hasClass("foodfinderpage")) {
-          title: 'How to use the Foodfinder Page:',
-          text: 'Select a location on campus to find out what food is available at that location.'
+          $.gritter.add({
+            title: 'How to use the Foodfinder Page:',
+            text: 'Select a location on campus to find out what food is available at that location.'
+            });
           }
         else if(this.hasClass("profilepage")) {
-          title: 'Welcome to the Profile',
-          text: 'Here you can check on your previous posts, and keep track of other posts that you liked or upvoted.'
+          $.gritter.add({
+            title: 'Welcome to the Profile',
+            text: 'Here you can check on your previous posts, and keep track of other posts that you liked or upvoted.'
+            });
           }
-        });
 
     return false;
     });
