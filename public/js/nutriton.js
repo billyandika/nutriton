@@ -17,18 +17,46 @@ function initializePage() {
     $(".version_a").click(function(){
       woopra.track("a_version_like_click");
       console.log("clicked A");
-      //add your Woopra tracking code for version A's like button click event
     });
 
     $(".version_b").click(function(){
       woopra.track("b_version_like_click");
       console.log("clicked B");
-      //add your Woopra tracking code for version A's like button click event
     });
 
     $(".back").click(function(){
       woopra.track("back_click");
       console.log("clicked Back");
+    })
+
+    $(".addMenuButton").click(function(){
+      woopra.track("addMenu_click");
+      console.log("clicked add menu");
+    })
+
+    $(".login_click").click(function(){
+      woopra.track("login_click");
+      console.log("clicked log in");
+    })
+
+    $(".foodfinder_click").click(function(){
+      woopra.track("foodfinder_click");
+      console.log("clicked foodfinder");
+    })
+
+    $(".profile_click").click(function(){
+      woopra.track("profile_click");
+      console.log("clicked profile");
+    })
+
+    $(".feed_click").click(function(){
+      woopra.track("feed_click");
+      console.log("clicked feed");
+    })
+
+    $(".logout_click").click(function(){
+      woopra.track("logout_click");
+      console.log("clicked logout");
     })
 
     $(".upvote").click(increaseVote);
@@ -65,7 +93,8 @@ function initializePage() {
     });
 
     $('#newPostSubmitButton').click(function(e) {
-      console.log('clicked');
+      woopra.track("newPost_click");
+      console.log('clicked new post');
       var title = $('#new-post-form #title').val();
       var content = $('#new-post-form #content').val();
       var json = {
@@ -105,6 +134,8 @@ function fillStar(e) {
         console.log("star is now favorited");
         $(this).html('<span class=\"glyphicon glyphicon-star\"></span>');
     }
+
+    woopra.track("favorite_click");
 }
 
 function increaseVote(e) {
