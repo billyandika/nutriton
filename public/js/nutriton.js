@@ -89,6 +89,11 @@ function initializePage() {
       console.log("bottom three clicked");
     })
 
+    $(".new_post_click").click(function(){
+      woopra.track("new_post_click");
+      console.log("clicked on new post");
+    })
+
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
     $(".favorite").click(fillStar);
@@ -124,7 +129,7 @@ function initializePage() {
 
     $('#newPostSubmitButton').click(function(e) {
       woopra.track("newPost_click");
-      console.log('clicked new post');
+      console.log('added new post');
       var title = $('#new-post-form #title').val();
       var content = $('#new-post-form #content').val();
       var json = {
