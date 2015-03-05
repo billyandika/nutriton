@@ -9,12 +9,14 @@
     <!-- Font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato|Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic|Open+Sans:400italic,600italic,700italic,700,600,400|Roboto:400,300italic,300,400italic,500,500italic,700,700italic|Raleway:400,300,500,600,700|Pacifico' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<!-- Lightbox -->
 	<link href="css/lightbox.css" rel="stylesheet" />
-        {{> tracking_code_script}}
+	<!-- Dining/market CSS -->
+    <link href="css/diningmarket.css" rel="stylesheet" />
+    {{> tracking_code_script}}
 
     <style>
 
@@ -40,68 +42,6 @@
 		font-size: 22pt;
 		text-shadow: 2px 2px 3px #17A57D;
 	}
-
-	
-.navbar-default {
-  background-color: #87b822;
-  border-color: #87b822;
-  font-size: 1.1em;
-}
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #ffffff;
-}
-.navbar-default .navbar-text {
-  color: #d4dca8;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #d4dca8;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #ffffff;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #87b822;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #87b822;
-}
-.navbar-default .navbar-toggle {
-  border-color: #87b822;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #87b822;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #d4dca8;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #d4dca8;
-}
-.navbar-default .navbar-link {
-  color: #d4dca8;
-}
-.navbar-default .navbar-link:hover {
-  color: #ffffff;
-}
-
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #d4dca8;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #87b822;
-  }
-}
 
     </style>
 
@@ -158,8 +98,6 @@
 
 	</div>
 
-	<!-- Include Google Maps API -->
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -169,8 +107,5 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/nutriton.js"></script>
-
-
-	
   </body>
 </html>

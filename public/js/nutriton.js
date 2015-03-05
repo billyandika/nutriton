@@ -64,6 +64,21 @@ function initializePage() {
       console.log("clicked profile box");
     })
 
+    $(".profile_help_click").click(function(){
+      woopra.track("profile_help_click");
+      console.log("profile help clicked");
+    })
+
+    $(".foodfinder_help_click").click(function(){
+      woopra.track("foodfinder_help_click");
+      console.log("foodfinder help clicked");
+    })
+
+    $(".feed_help_click").click(function(){
+      woopra.track("feed_help_click");
+      console.log("feed help clicked");
+    })
+
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
     $(".favorite").click(fillStar);
