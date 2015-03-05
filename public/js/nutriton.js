@@ -79,6 +79,16 @@ function initializePage() {
       console.log("feed help clicked");
     })
 
+    $(".nutriton_click").click(function(){
+      woopra.track("nutriton_click");
+      console.log("nutriton clicked");
+    })
+
+    $(".bottom_three").click(function(){
+      woopra.track("bottom_three");
+      console.log("bottom three clicked");
+    })
+
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
     $(".favorite").click(fillStar);
