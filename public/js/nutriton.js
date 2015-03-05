@@ -13,39 +13,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    // global setting override
-    /*
-    $.extend($.gritter.options, {
-      class_name: 'gritter-light', // for light notifications (can be added directly to $.gritter.add too)
-      position: 'bottom-left', // possibilities: bottom-left, bottom-right, top-left, top-right
-      fade_in_speed: 100, // how fast notifications fade in (string or int)
-      fade_out_speed: 100, // how fast the notices fade out
-      time: 3000 // hang on the screen for...
-    });*/
-        
-    $('#add-without-image').click(function(e){
-      e.preventDefault();
-        if(this.hasClass("indexpage")) {
-          $.gritter.add({
-            title: 'How to use the Feed:',
-            text: 'Like, upvote, downvote, or create posts.'
-            });
-          }
-        else if(this.hasClass("foodfinderpage")) {
-          $.gritter.add({
-            title: 'How to use the Foodfinder Page:',
-            text: 'Select a location on campus to find out what food is available at that location.'
-            });
-          }
-        else if(this.hasClass("profilepage")) {
-          $.gritter.add({
-            title: 'Welcome to the Profile',
-            text: 'Here you can check on your previous posts, and keep track of other posts that you liked or upvoted.'
-            });
-          }
-
-    return false;
-    });
 
     $(".version_a").click(function(){
       woopra.track("a_version_like_click");
