@@ -59,6 +59,11 @@ function initializePage() {
       console.log("clicked logout");
     })
 
+    $(".profileBox_click").click(function(){
+      woopra.track("profileBox_click");
+      console.log("clicked profile box");
+    })
+
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
     $(".favorite").click(fillStar);

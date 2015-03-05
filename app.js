@@ -17,6 +17,7 @@ var foodfinder = require('./routes/foodfinder');
 var foodfinderalternative = require('./routes/foodfinderalternative');
 var help = require('./routes/help');
 var profile = require('./routes/profile');
+var profilealternative = require('./routes/profilealternative');
 var addcanyonvista = require('./routes/addcanyonvista');
 var addpines = require('./routes/addpines');
 var addroots = require('./routes/addroots');
@@ -83,6 +84,7 @@ app.get('/foodfinder', foodfinder.view);
 app.get('/foodfinderalternative', foodfinderalternative.view);
 
 app.get('/profile', profile.view);
+app.get('/profilealternative', profilealternative.view);
 app.get('/addcanyonvista', addcanyonvista.addMenu);
 app.get('/addpines', addpines.addMenu);
 app.get('/addroots', addroots.addMenu);
