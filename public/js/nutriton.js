@@ -26,6 +26,11 @@ function initializePage() {
       //add your Woopra tracking code for version A's like button click event
     });
 
+    $(".back").click(function(){
+      woopra.track("back_click");
+      console.log("clicked Back");
+    })
+
     $(".upvote").click(increaseVote);
     $(".downvote").click(decreaseVote);
     $(".favorite").click(fillStar);
@@ -105,7 +110,6 @@ function fillStar(e) {
 function increaseVote(e) {
 
     e.preventDefault();
-    
     //colors used, like and dislike: rgb(135, 184, 34) rgb(235, 138, 131)
     if($(this).css("color") == "rgb(51, 51, 51)") {
         if(($(this).next().children().hasClass("glyphicon-thumbs-down")) && 
@@ -137,7 +141,7 @@ function increaseVote(e) {
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-up\"></span> ' + (voteBackCount-1));
     }
 
-    // woopra.track("upvote_click");
+    woopra.track("upvote_click");
     console.log("clicked upvote");
 }
 
@@ -176,6 +180,6 @@ function decreaseVote(e) {
       $(this).html('<span class=\"glyphicon glyphicon-thumbs-down\"></span> ' + (voteBackCount-1));
     }
     woopra.track("downvote_click");
-
+    console.log("clicked downvote");
 }
 
