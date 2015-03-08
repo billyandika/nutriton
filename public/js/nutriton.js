@@ -18,7 +18,7 @@ function initializePage() {
         $(this).parents('.btn-group').find('type').val(selectedType);
     });
 
-    $("#new-post-form .form-group .contentBox").keypress(function(){
+    $("#new-post-form .form-group .contentBox").keydown(function(){
       if(this.value.length > 2000){
           return false;
       }
@@ -175,10 +175,12 @@ function fillStar(e) {
     if($(this).children().hasClass("glyphicon-star")) {
         console.log("star is now unfavorited");
         $(this).html('<span class=\"glyphicon glyphicon-star-empty\"><span>');
+        $(this).css("background-color", "rgb(255, 255, 255)");
     }
     else if($(this).children().hasClass("glyphicon-star-empty")) {
         console.log("star is now favorited");
         $(this).html('<span class=\"glyphicon glyphicon-star\"></span>');
+        $(this).css("background-color", "rgb(255, 165, 0)");
     }
 
     woopra.track("favorite_click");
