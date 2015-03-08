@@ -119,58 +119,5 @@
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/nutriton.js"></script>
 
-	<script>
-
-	var data = {
-	"canyonvistaposts": [
-		{
-			"name": "Carved Roast Turkey",
-			"type": "Gluten-free",
-			"upvotes": "2",
-			"downvotes": "0"
-		},
-		{
-			"name": "Steamed Vegetables",
-			"type": "Vegan",
-			"upvotes": "3",
-			"downvotes": "1"
-		},
-		{
-			"name": "Chipotle Burger",
-			"type": "Vegetarian",
-			"upvotes": "5",
-			"downvotes": "1"
-		},
-		{
-			"name": "Power Protein Bowl",
-			"type": "Gluten-free",
-			"upvotes": "3",
-			"downvotes": "2"
-		},
-		{
-			"name": "Hummus Platter",
-			"type": "Vegetarian",
-			"upvotes": "4",
-			"downvotes": "2"
-		},
-		{
-			"name": "Gardein Burger",
-			"type": "Vegetarian",
-			"upvotes": "3",
-			"downvotes": "0"
-		}
-	]
-}
-
-var returnedData = $.grep(data.canyonvistaposts, function (element, index) {
-    return element.type == "Vegetarian";
-});
-
-
-alert(returnedData[0].type + "  ");
-
-
-	</script>
-
   </body>
 </html>
