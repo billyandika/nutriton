@@ -14,13 +14,13 @@
 		},
 		{
 			"name": "Achiote Chicken Bowl",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "11",
 			"downvotes": "1"
 		},
 		{
 			"name": "Carnitas Bowl",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "7",
 			"downvotes": "1"
 		},
@@ -32,7 +32,7 @@
 		},
 		{
 			"name": "Carne Asada",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "5",
 			"downvotes": "1"
 		}

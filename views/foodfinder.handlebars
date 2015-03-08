@@ -103,41 +103,24 @@
     background-color: #87b822;
   }
 }
-	/* Responsive embed CSS for Google Maps */
-/*    .google-maps {
-        position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
-        height: 0;
-        overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }*/
 
 	/* Responsive embed CSS for Google Maps */
 	#mapContainer {
 	    height: 500px;
 	    width: 100%;
 	}
-
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
 		#mapContainer {
 		    height: 500px;
 	    	width: 100%;
 		}
 	}	
-		
 	@media only screen and (max-width: 767px) {
 		#mapContainer {
 		    height: 260px;
 	    	width: 100%;
 		}
 	}	
-
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		#mapContainer {
 		    height: 400px;
@@ -177,6 +160,9 @@
 
 	<div class="container">
 	  <br/><br/><br/> 
+
+    <div id="mapContainer"></div>
+
     <a href="#" class="btn btn-default pull-right foodfinder_help_click" data-toggle="modal" data-target="#basicModal">?</a>
       
       <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -196,8 +182,6 @@
         </div>
       </div>
     <br/><br/>
-
-	  <div id="mapContainer"></div>
     
     <a href="market" class="version_a">  
     <div class="panel panel-default ">

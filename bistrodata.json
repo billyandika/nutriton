@@ -14,13 +14,13 @@
 		},
 		{
 			"name": "Bistro Green Salad",
-			"type": "Vegan, Gluten-friendly",
+			"type": "Vegan",
 			"upvotes": "11",
 			"downvotes": "1"
 		},
 		{
 			"name": "Green Papaya Sandwich",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "7",
 			"downvotes": "1"
 		},
@@ -38,13 +38,13 @@
 		},
 		{
 			"name": "Kihada Roll Sushi",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "8",
 			"downvotes": "3"
 		},
 		{
 			"name": "Sun God Sushi",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "5",
 			"downvotes": "1"
 		}

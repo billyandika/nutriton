@@ -17,6 +17,24 @@
 			"type": "Vegetarian",
 			"upvotes": "5",
 			"downvotes": "1"
+		},
+		{
+			"name": "Power Protein Bowl",
+			"type": "Gluten-free",
+			"upvotes": "3",
+			"downvotes": "2"
+		},
+		{
+			"name": "Hummus Platter",
+			"type": "Vegetarian",
+			"upvotes": "4",
+			"downvotes": "2"
+		},
+		{
+			"name": "Gardein Burger",
+			"type": "Vegetarian",
+			"upvotes": "3",
+			"downvotes": "0"
 		}
 	]
 }

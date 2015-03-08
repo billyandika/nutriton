@@ -2,7 +2,7 @@
 	"clubmedposts": [
 		{
 			"name": "Green Toss Salad",
-			"type": "Vegan, Vegetarian",
+			"type": "Vegan",
 			"upvotes": "8",
 			"downvotes": "0"
 		},
@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "Vegetarian Chili Soup",
-			"type": "Vegetarian, Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "17",
 			"downvotes": "3"
 		},

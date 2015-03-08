@@ -2,13 +2,13 @@
 	"cafevposts": [
 		{
 			"name": "Frijoles",
-			"type": "Vegan, Gluten-friendly",
+			"type": "Vegan",
 			"upvotes": "8",
 			"downvotes": "0"
 		},
 		{
 			"name": "Smoked Bacon",
-			"type": "Gluten-friendly",
+			"type": "Gluten-free",
 			"upvotes": "17",
 			"downvotes": "2"
 		},
@@ -20,7 +20,7 @@
 		},
 		{
 			"name": "Steamed Brown Rice",
-			"type": "Vegan, Gluten-friendly",
+			"type": "Vegan",
 			"upvotes": "7",
 			"downvotes": "1"
 		},

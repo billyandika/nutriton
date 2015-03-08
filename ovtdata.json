@@ -2,19 +2,19 @@
 	"ovtposts": [
 		{
 			"name": "Cut Fresh Fruit",
-			"type": "Vegan, Gluten-friendly",
+			"type": "Vegan",
 			"upvotes": "8",
 			"downvotes": "0"
 		},
 		{
 			"name": "Cage Free Scrambled Eggs",
-			"type": "Vegetarian, Gluten-friendly",
+			"type": "Vegetarian",
 			"upvotes": "17",
 			"downvotes": "2"
 		},
 		{
 			"name": "Frijoles",
-			"type": "Gluten-friendly, Vegan",
+			"type": "Gluten-free",
 			"upvotes": "11",
 			"downvotes": "1"
 		},

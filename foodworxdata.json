@@ -11,6 +11,24 @@
 			"type": "Vegetarian",
 			"upvotes": "17",
 			"downvotes": "2"
+		},
+		{
+			"name": "Veggie Sandwich",
+			"type": "Vegetarian",
+			"upvotes": "9",
+			"downvotes": "3"
+		},
+		{
+			"name": "Chicken Caesar Wrap",
+			"type": "Gluten-free",
+			"upvotes": "10",
+			"downvotes": "2"
+		},
+		{
+			"name": "Savannah Chopped Salad",
+			"type": "Vegetarian",
+			"upvotes": "15",
+			"downvotes": "3"
 		}
 	]
 }
