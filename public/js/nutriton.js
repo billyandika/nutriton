@@ -10,6 +10,14 @@ $(document).ready(function() {
  */
 function initializePage() {
 
+    $(".type-menu li").click(function(e)
+      {
+        e.preventDefault();
+        var selectedType = $(this).text();
+        $(this).parents('.btn-group').find('.dropdown-toggle').html(selectedType+' <span class="caret"></span>');
+        $(this).parents('.btn-group').find('type').val(selectedType);
+    });
+
     $("#new-post-form .form-group .contentBox").keypress(function(){
       if(this.value.length > 2000){
           return false;

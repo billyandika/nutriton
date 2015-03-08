@@ -83,15 +83,25 @@
 		    		<br/>
 
 				    <form id="addCanyonVistaForm" role="form" method="get" action="/addcanyonvista">
-					    <h4><strong>Add Menu</strong></h4>
+					    <h4><strong>Add New Menu</strong></h4>
 					    <div class="form-group form-inline">
-					      	<label for="name">Name:</label>
-					      	<input type="text" class="form-control" id="name" placeholder="e.g. fish" name="name">
+					    <label for="name">Name:</label>
+					    <input id="name" name="name">
 					    </div>
 					    <div class="form-group form-inline">
-					    <label for="type">Type:</label>
-					     	<input type="text" class="form-control" id="type" placeholder="e.g. Gluten-free" name="type">
-					    </div>
+					    <label for="name">Type:</label>
+					    <input class="form-control" id="type" name="type" type="hidden">
+	        				<div class="btn-group">
+	          					<button class="btn btn-default btn-md dropdown-toggle" type="button" data-toggle="dropdown">Food Type <span class="caret"></span></button>
+	        					<ul class="dropdown-menu type-menu" role="menu">
+	          						<li onclick="$('#type').val('Vegan');"><a>Vegan</a></li>
+	          						<li onclick="$('#type').val('Vegetarian')"><a>Vegatarian</a></li>
+	          						<li onclick="$('#type').val('Gluten-free')"><a>Gluten-free</a></li>
+	          						<li onclick="$('#type').val('Kosher')"><a>Kosher</a></li>
+	        					</ul>
+	       					 </div>
+       					 </div>
+
 					    <input type="submit" id="submitBtn" class="btn btn-default addMenuButton" value="Post"></input>
 					</form>
   			</div>
